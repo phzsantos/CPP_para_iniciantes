@@ -1,0 +1,56 @@
+# C++ Morderno para Iniciantes
+
+### Criei esse repositório com intuito de documentar o curso que fiz de C++ para iniciantes.
+
+**Nome do curso:** Curso de C++ Moderno para Iniciantes
+
+**Total de horas:** 6,5 horas
+
+**Quantidade total de aulas:** 39
+
+**Linguagem utilizada:** C++
+
+**Link:** https://www.udemy.com/course/curso-de-cpp-moderno-para-iniciantes/
+
+### Documentação:
+
+- [ ] Apresentação
+- [ ] Introdução
+- [ ] Como o C++ funciona ?
+- [ ] Primeiro programa em C++
+- [ ] Comentando seu código
+- [ ] Criando e entendendo Variáveis em C++
+- [ ] Operadores e procedência
+- [ ] Conceitos e criação de Funções
+- [ ] Headers ou Cabeçalhos
+- [ ] Como atribuir valores Constantes
+- [ ] Conversão de dados de tipos
+- [ ] Arrays - Um estrutura de dados indexados
+- [ ] Coletando dados informados pelo usuário
+- [ ] Estruturas que avaliam Condições
+- [ ] Controles de Fluxo de Repetições
+- [ ] Diretivas, pré-compiladores
+- [ ] Obtendo endereços de memória com Ponteiros
+- [ ] A classe vector
+- [ ] Argumentos via Linha de Comando
+- [ ] Alocação Dinâmica de Memória
+- [ ] Funções Recursivas
+- [ ] Sobrecarga de e Ponteiros de Funções
+- [ ] O que é, como criar e como utilizar Structs
+- [ ] Tipos Enumerados
+- [ ] Manipulando arquivos com C++
+- [ ] Executando comando da Shell via C++
+- [ ] Utilizando o tipo static
+- [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 1
+- [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 2
+- [ ] Exercício 2: Desenhando com C++ via Loops - Parte 1
+- [ ] Exercício 2: Desenhando com C++ via Loops - Parte 2
+- [ ] Exercício 2: Desenhando com C++ via Loops - Parte 3
+- [ ] Introdução à biblioteca NCURSES
+- [ ] Utilizando o Makefile
+- [ ] Aprendendo a utilizar o CMake, Ninja e Meson
+- [ ] Conceitos sobre Autotools e o IDE Anjuta
+- [ ] Boas Práticas e Dicas para escrever melhor em C++
+- [ ] Obtendo informações e modificando Versões do C++ para seu programa
+- [ ] return 0;
+- [ ] Vamos testar seu conhecimento de acordo com o conteúdo de C++ para Iniciantes
