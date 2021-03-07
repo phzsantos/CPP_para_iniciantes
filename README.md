@@ -14,7 +14,7 @@
 
 ### Documentação:
 
-- [ ] Apresentação
+- [x] Apresentação
 - [ ] Introdução
 - [ ] Como o C++ funciona ?
 - [ ] Primeiro programa em C++
