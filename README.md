@@ -16,7 +16,7 @@
 
 - [x] Apresentação
 - [x] Introdução
-- [ ] Como o C++ funciona ?
+- [x] Como o C++ funciona ?
 - [ ] Primeiro programa em C++
 - [ ] Comentando seu código
 - [ ] Criando e entendendo Variáveis em C++

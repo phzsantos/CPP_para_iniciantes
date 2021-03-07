@@ -73,3 +73,42 @@ O grupo de desenvolvimento Boost.org trabalha para evoluir a biblioteca padrão,
 * Godot
 * JVM (Maquina virtual do Java, bem como compiladores para Java)
 * Tensorflow
+
+
+
+#--------------------------------------Terceira Aula--------------------------------------#
+
+### Como o C++ funciona?
+
+A CPU de um computador é incapaz de entender o C++. O conjunto limitado que uma CPU ode entender diretamente é chamado de código da maquina (ou idioma de maquina ou conjunto de instruções). Aqui estóa uma instrução de linguagem de maquina de amostra: 10110000 01100001.
+
+Em palavras finais podemos dizer que: o codigo que se escreve em C++ é transformado em Assembly e posteriormente transformado em linguagem de maquina:
+
+C++: int a = 97 -> Assembly: mov al, 061h -> Máquina: 1011000 01100001
+
+Por isso o C++ é considerada uma linguagem de alto nivel (Longe do hardware em relação ao Assembly), já o Assembly de baixo nivel porque ele transforma diretamente em linguagem de maquina.
+
+### Compilação de codigo:
+
+Esse é o processo simplificado de uma compilãção:
+
+High-level language source code -> Compiler -> executable -> executable -> hardware -> program results
+
+Algumas pessoas confundem COMPILADORES com INTERPRETADORES!
+
+Os interpretadores tendem a ser mais flexiveis que os compiladores, mas menos eficientes ao executar programas, porque o processo de interpretação precisa ser realizado toda vez que o programa é executado. Isso significa que o interprete é necessario toda vez que o programa é executado.
+
+### Interpretadores vs Compiladores
+
+Exemplos de linguagens que usam compiladores: C, C++, C#, COBOL, Common Lisp, Delphi, Fortran, Java, Objective-C, ...
+
+Exemplos de linguagens queusam interpretadores: Bash, Perl, PHP, Python, JavaScript, Lua, Ruby, Haskell, ...
+
+### Compiladores
+
+Existem diversor compiladores. Dentre eles os mais conhecidos são:
+
+GCC/g++ -> Mais usado
+LLVM -> Clang
+
+
