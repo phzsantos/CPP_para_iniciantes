@@ -166,3 +166,24 @@ Para se aprender qualquer linguagem de programação deve-se saber o basico do b
 **Onde colocar as Bibliotecas:** .h, .hh, .hpp, .hxx, .h++.
 
 
+
+#--------------------------------------Quinta Aula--------------------------------------#
+
+### Para que servem os comentarios 
+
+Servem para os outros programadores que forem ler seu codigo e para explicar para si mesmo o que você fez ali anteriormente.
+
+O compilador ignora os comentarios, onde estiver comentado ele não lê. 
+
+### Tipos de comentarios
+
+* // = Começou no C++, ele é usado para comentar uma linha apenas
+* /asterisco  asterisco/ = Este é usado para comentar um bloco inteiro de codigo.
+
+### Para forçar o programa a mostrar warnings, caso hajam:
+
+**Compile usando:**
+
+```g++ -Werror nomedoprograma -o nomequevocêquiser```
+
+O ideal é ele não não retornar nenhum erro e nenhum warn 
