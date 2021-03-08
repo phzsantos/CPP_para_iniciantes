@@ -1,6 +1,7 @@
 #include <iostream>
+using namespace std;
 
 int main(){
-	std::cout << "Meu Primeiro programa em C++" << std::endl;
+	cout << "Meu Primeiro programa em C++" << '\n';
 	return 0;
 }

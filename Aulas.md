@@ -115,3 +115,54 @@ LLVM -> Clang
 
 #--------------------------------------Quarta Aula--------------------------------------#
 
+### Meu primeiro programa em C++
+
+Para se aprender qualquer linguagem de programação deve-se saber o basico do basico. Escrever algo na tela, por que não um Olá mundo?
+
+
+
+### Noções basicas para o primeiro hello world 
+
+* Incluir biblioteca: include <>
+
+* Toda função precisa ser definida com um tipo: int por exemplo
+
+* Blocos de codigo funcionam com chaves {}
+
+* Biblicoteca de input e output: iostream
+
+* Todo programa em C++ deve ter a função main: main()
+
+* Todas as instruções devem terminar em ;
+
+* Para escrever em C++ sempre tem que usar aspas duplas ""
+
+* Toda função main precisa de um return: Return 0;
+
+* 1 caractere = aspas simples, mais de 1 caractere = aspas duplas
+
+* Usar "using" para que o proprio compilador insira onde deve o namespace
+
+* Pular linha '\n'
+
+### Sobre compilação
+
+**Para compilar o programa renomeando ele como quiser:**
+
+```g++ nomedoprogramaasercompilado -o nomedoprogramaquevocêquiser```
+
+**Se você não usar "-o" para nomear o programa compilado ele vai criar um arquivo:**
+
+```a.out```
+
+**Para mais detalhes durante a compilação:**
+
+```g++ -v nomedoprogramaasercompilado```
+
+### Extensões em C++
+
+**As extensões do C++ são:** .C, .cc, .cpp, .cxx, .c++, .h, .hh, .hpp, .hxx, .h++.
+
+**Onde colocar as Bibliotecas:** .h, .hh, .hpp, .hxx, .h++.
+
+
