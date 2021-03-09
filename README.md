@@ -19,7 +19,7 @@
 - [x] Como o C++ funciona ?
 - [x] Primeiro programa em C++
 - [x] Comentando seu código
-- [ ] Criando e entendendo Variáveis em C++
+- [x] Criando e entendendo Variáveis em C++
 - [ ] Operadores e procedência
 - [ ] Conceitos e criação de Funções
 - [ ] Headers ou Cabeçalhos

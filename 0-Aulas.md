@@ -177,8 +177,8 @@ O compilador ignora os comentarios, onde estiver comentado ele não lê.
 
 ### Tipos de comentarios
 
-* // = Começou no C++, ele é usado para comentar uma linha apenas
-* /asterisco  asterisco/ = Este é usado para comentar um bloco inteiro de codigo.
+* ```//```= Começou no C++, ele é usado para comentar uma linha apenas
+* ```/* */```= Este é usado para comentar um bloco inteiro de codigo.
 
 ### Para forçar o programa a mostrar warnings, caso hajam:
 
@@ -187,3 +187,120 @@ O compilador ignora os comentarios, onde estiver comentado ele não lê.
 ```g++ -Werror nomedoprograma -o nomequevocêquiser```
 
 O ideal é ele não não retornar nenhum erro e nenhum warn 
+
+
+
+#--------------------------------------Sexta Aula--------------------------------------#
+
+### Variaveis em C++
+
+Variaveis, como o proprio nome já diz, o conteudo dela pode variar de acordo como você desejar, elas armazenam valor e guardam essa valor (na memoria do computador) para serem usadas na situação em que solicita. Esta informação está associada com um lugar especifico da memoria (isso feito pelo compilador). Cada variavel tem um tipo associado.
+
+### Os tipos basicos de dados existentes em C++
+
+|     Type      |      Bits     |      Faixa de valores         |
+| ------------- |:-------------:|:-----------------------------:| 
+| Char          |       8       |         -128 a 127            |
+| bool          |       8       |        true ou false          |  
+| int           |      32       | -2.147.483.647 a 2.47.483.647 |
+| float         |      32       |   7 digitos significativos    |
+| double        |      64       |    digitos significativos     |
+
+### Definição de variaveis em C++
+
+Para criar uma variavel, usamos um tipo especial de instrução de declaração chamada definição (definição é diferente de declaração)
+
+```int x;```
+
+Ao definir uma variavel, mesmo que não atibuirmos valor a ela, a mesma já possuira uma instancia apos compilada(runtime = tempo de execução), ou seja, já havera um espaço/endereço reservado para ela na memoria RAM.
+
+É possivel declarar multiplas variaveis de mesmo tipo, exemplos:
+
+```char x, y, z;```
+
+Para criar um nome de variavel deve-se respeitar as seguintes regras:
+
+Inicie suas variaveis somente com letras;
+
+**Não use:** espaços, acentos, cedilhas, traços... somente letras e/ou underlines, exemplo:
+
+|       Variavel       |  Certo/Errado |
+| -------------------- |:-------------:|
+| int x;               | certo         |
+| char letra_inicial;  | certo         |
+| double _y;           | certo         |
+| int 9x;              | errado        |
+| int x, int y;        | errado        |
+| int z, float r;      | errado        |  
+| char word; int z8;   | certo         |
+
+### Compilando com -Werror e -Wall para transformar warns em erros 
+
+```g++ -Werror -Wall nomedoprograma -o nomequevocêquiser```
+
+### Declaração e inicialização de variaveis em C++
+
+Quando você define uma variavel deve-se declarar/inicializar um valor para ela, o compilador informa um warning, ou seja, se você definir você precisa declarar um valor.
+
+Observação: É importante você ficar atento algumas nomenclaturas do C++ se você veio de outras linguagem de programação, exemplos:
+
+* **Definir** = Criar uma variavel 
+* **Declarar ou inicializar** = Atribuir um valor
+
+Exemplo de declaração de acordo com os exemplos anteriores:
+
+```int x = 3;```
+
+```char letra_inicial = 'a';```
+
+```double y = 69.03;```
+
+Outra coisa importante é você não pode declarar uma mesma variavel 2 vezes, isso nem gera warning pelo compilador e sim um Error e seu codigo não compila. Mas você pode alterar o valor da variavel.
+
+### Algumas dicas sobre variaveis
+
+* Toda vez que é um inteiro e você define ele sem valor especifico, ele retorna por padrão, zero.
+
+* Char só pode ter um caractere, não importa qual ele seja. se você colocar 2 caracteres ou mais ele vai dar um Warn e considerar o ultimo caractere, ignorando todo o resto.
+
+* Fique de olho em unsigned e signed. 
+
+* Lembre de usar "." ao inves de virgula.
+
+* String tem que ter o std:: na frente
+
+* String tem que usar aspas duplas sempre "".
+
+* Caso você definir uma string e não declarar ela vai não vai te retornar nada. Mas sempre prefira inicializala vazia de forma uniforme.
+
+* :: quer dizer operador de resolução de escopo. 
+
+* namespace é a forma de não escrever varias vezes um nome de uma classe. 
+
+### Tipos de inicialização de variaveis em C++
+
+Existem 3 formas de você inicializar(declarar ou atribuir valor) a uma variavel, a mais utilizada principalmente para quem veio de outras linguagens de programação é a INICIALIZAÇÃO DE COPIA, mas ela não deve ser usada com frequencia, pois você gasta espaço na memoria e dependendo do tamanho do seu programa ela pode gerar muita lentidão no tempo de execução.
+
+Em muitos lugares você obterá a informação de variaveis citando: lvalue(lado esquerdo, left da declaração da variavel.) e rvalue (lado direito, inicialização, right).
+
+lvalue vs rvalue
+
+```int x = { 10 };``` 
+
+**Inicialização de copia:** int x = 10;
+
+**Inicialização Direta:** int x ( 10 ); Não tão diferente da copia, quando o tipo for inteiro int
+
+**Inicialização Uniforme:** int x { 10 }; Use sempre que possivel isso gera ganho de desempenho.
+
+É possivel (e preferivel) inicializar uma variavel sempre que definirmos, caso não haja um valor pré-definido, inicialize de forma vazia, exemplos:
+
+```double z {};```
+
+```char gun = "";```
+
+```int x();```
+
+Para as inicializações direta e uniforme ainda podemos usar o sinal de = para separar o lvalue do rvalue, exemplo: double z = { 36.09 };, isso continua sendo uniforme mesmo tendo igual. 
+
+  
