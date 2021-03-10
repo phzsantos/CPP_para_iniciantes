@@ -4,6 +4,6 @@ using namespace std;
 int x = 3, y = 6;
 
 int main(){
-	cout << "x * y = " << x * y << '\n';
+	cout << "y / x = " << y / x << '\n';
 	return 0;
 }
