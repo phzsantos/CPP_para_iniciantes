@@ -303,4 +303,86 @@ lvalue vs rvalue
 
 Para as inicializações direta e uniforme ainda podemos usar o sinal de = para separar o lvalue do rvalue, exemplo: double z = { 36.09 };, isso continua sendo uniforme mesmo tendo igual. 
 
-  
+
+
+#--------------------------------------Setima Aula--------------------------------------#  
+
+### Operadores em C++
+
+Apesar de ainda não usarmos todos os operadores que veremos nesse topico, é importante falarmos deles logo no inicio para já termos uma ideia quando usarmos futuramente.
+
+Alguns já vimos e isso facilitara a compreensão dos demais.
+
+### Operadores aritimeticos:
+
+|     Operadores      |      Syntax     | 
+| ------------------- |:---------------:|
+| Adição unaria | +a |
+| Adição | a + b |
+| Incremento pré-fixado | ++a |
+| Incremento pós-fixado | a++ |
+| Atribuição por adição | a += b |
+| Subtração unaria | -a |
+| Subtração | a - b |
+| Decremento pré-fixado | --a |
+| Decremento pós-fixado | a-- |
+| Atribuição por subtração | a -= b|
+| Multiplicação | a * b |
+| Atribuição por multiplicação | a *= b |
+| Divisão | a / b |
+| Atribuição por divisão | /= b |
+| Modulo (resto) | a % b |
+| Atribuição por módulo (resto) | a %= b |
+
+### Operadores comparativos:
+
+|     Operadores      |      Syntax     | 
+| ------------------- |:---------------:|
+| Menor que | a < b |
+| Menor ou igual que | a <= b |
+| Maior que | a > b |
+| Maior ou igual que | a >= b |
+| Diferente de | a != b |
+| Igual a | a == b | 
+| Não logico | !a | 
+| E logico | a && b |
+| Ou logico | a pipe pipe b |
+| Deslocamento a esquerda | a << b | 
+| Atribuição de deslocamento a esquerda | a <<= b |
+| Deslocamento a direita | a >> b |
+| Atribuição de deslocamento a direita | a >>= b |
+
+### Operadores logicos sobre bits:
+
+|     Operadores      |      Syntax     | 
+| ------------------- |:---------------:|
+| Complemento | ~a |
+| E | a & b | 
+| Atribuição por e | a &= b |
+| Ou | a pipe b |
+| Atribuição por ou | a pipe= b |
+| Ou exclusivo | a ^ b |
+| Atribuição por ou exclusivo | a ^= b |  
+
+### Outros operadores: 
+
+|     Operadores      |      Syntax     | 
+| ------------------- |:---------------:|
+| Atribuição | a = b |
+| Chamada de função | a() |
+| Elemento de arranjo | a[] | 
+| De referencia | *a | 
+| Referencia | &a |
+| Membro de ponteiro | a -> b |
+| Membro de identificador | a.b |
+| De referencia de membro de identificador | a.*b
+| De-referencia de membro de ponteiro | a ->* b |
+| Conversão de tipo de dados | (tipo) a |
+| Virgula | a , b |
+| Condição ternaria | a ? b : c |
+| Resolução de escopo | a :: b |
+| Tamanho de | sizeof a | 
+| Identificador de tipo | typeid (tido de dado) |
+
+
+ 

@@ -20,7 +20,7 @@
 - [x] Primeiro programa em C++
 - [x] Comentando seu código
 - [x] Criando e entendendo Variáveis em C++
-- [ ] Operadores e procedência
+- [x] Operadores e procedência
 - [ ] Conceitos e criação de Funções
 - [ ] Headers ou Cabeçalhos
 - [ ] Como atribuir valores Constantes
