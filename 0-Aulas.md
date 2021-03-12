@@ -385,4 +385,168 @@ Alguns já vimos e isso facilitara a compreensão dos demais.
 | Identificador de tipo | typeid (tido de dado) |
 
 
- 
+
+#--------------------------------------Oitava Aula--------------------------------------# 
+
+### Funções
+
+Quando queremos resolver um problema, em geral tentamos dividi-lo em subproblemas
+mais simples e relativamente independentes, e resolvemos os problemas mais simples
+um a um. Uma função cria uma maneira conveniente de encapsular alguns detalhes de
+"processamento", ou seja, como algum resultado é obtido.
+
+Criando funções, um programa C++ pode ser estruturado em partes relativamente
+independentes que correspondem as subdivisões do problema. Funções como: cin.get(),
+sqrt() , são funções de uma biblioteca padrão (do C++ ). Você não sabe como elas
+foram escritas, mas pode saber como utilizá-las.
+
+Ou seja, você sabe o nome das funções e quais informações específicas você deve
+fornecer a elas (valores que devem ser passados para as funções) para que a função
+produza os resultados esperados. Quando nos referirmos a uma função neste texto
+usaremos a maneira frequentemente utilizada que é o nome da função seguido de () .
+As funções - como variáveis - requerem nomes; as mesmas regras aplicáveis aos nomes
+de variáveis também se aplicam a nomes de funções (sequência de letras ou dígitos
+numéricos, mas não iniciando com um dígito; nenhum caractere especial, exceto o
+sublinhado).
+
+**Hello World só que em forma de função:**
+
+```#include <iostream>```
+
+```using namespace std;```
+
+```// criamos a função```
+
+```void minha_funcao(){```
+
+```cout << "Olá, mundo!\n";```
+
+```}```
+
+```main(){```
+
+```// chamamos a função```
+
+```minha_funcao();```
+
+```}```
+
+### Tipos de funções em C++
+
+O tipo de uma função está diretamente relacionado ao tipo de retorno
+da função. Funções tipo void não tem e não devem ter retorno.
+
+```void minha_funcao(){```
+
+```std::cout << “Eu sou uma função” << ‘\n’;```
+
+```return 0; // erro```
+
+```}```
+
+Mas todos os tipos que podemos atribuir à variáveis também são
+atribuíveis à funções: int, std::string, float, bool e void.
+
+As mesmas regras para criação de nomes de variáveis se aplicam a
+criação para nomes de função. 
+
+Parâmetros de funções são valores que devem ser passados para ela.
+
+```#include <iostream>```
+
+```using namespace std;```
+
+```// criamos a função```
+
+```int soma( int x, int y ){```
+
+```return x + y;```
+
+```}```
+
+```int main(){```
+
+```// chamamos a função```
+
+```cout << soma(3, 6) << ‘\n’```
+
+```return 0;```
+
+```}```
+
+Funções da biblioteca padrão: STL(Standard Template Library) do C++ e de outras bibliotecas.
+Vamos conhecer algumas como:
+
+Converter para MAIÚSCULA: toupper()
+
+```#include <iostream>```
+
+```int main(){```
+
+```char a = 'a';```
+
+```std::cout << a << '\n';```
+
+```std::cout << toupper( a ) << '\n';```
+
+```a = toupper( a );```
+
+```std::cout << a << '\n';```
+
+```return 0;```
+
+```}```
+
+E entre outras como: tolower(), abs(), isalpha(), isdigit(), … que veremos ao decorrer do curso e quando vermos sobre cabeçalhos.
+
+### Funções
+
+* Toda função int deve ter um return de pelo menos 0. 
+
+* Existem varios jeitos de escrever uma função. Opite sempre pelo jeito que economiza mais.  
+
+* Para quebrar linha é so usar **\n**
+
+* toupper só funciona com char.
+
+* Quando você usa toupper ele vai primeiro jogar o caractere para a tabela ascii. 
+
+### Prototipos 
+
+Protótipos de funções, são utilizados para facilitarmos o trabalho do compilador e o
+mesmo gerar um binário sem “buracos”.
+
+Código binário gerado COM “buracos”:
+
+100111       11100   10000  10000          100000
+100011   101000  1000101
+
+Código binário gerado SEM “buracos”:
+
+01010000 01110010 01101001 01101101 01100101 01101001 01110010 01101111
+01010100 01100101 01110010 01100011 01100101 01101001 01110010 01101111 
+
+Usando prototipos nós damos mais velocidade para nossa aplicação. 
+
+**Exemplo de uma função com protótipo:**
+
+```#include <iostream>```
+
+```int produto( int x, int y );```
+
+```int main(){```
+
+```std::cout << "O produto de 369 x 936 é: " << produto(369, 936) << '\n';```
+
+```return 0;```
+
+```}```
+
+```int produto( int x, int y ){```
+
+```return x * y;```
+
+```}```
+
+Uma dica de boa prática é indicar somente o tipo das variáveis passadas. 
+

@@ -21,7 +21,7 @@
 - [x] Comentando seu código
 - [x] Criando e entendendo Variáveis em C++
 - [x] Operadores e procedência
-- [ ] Conceitos e criação de Funções
+- [x] Conceitos e criação de Funções
 - [ ] Headers ou Cabeçalhos
 - [ ] Como atribuir valores Constantes
 - [ ] Conversão de dados de tipos
