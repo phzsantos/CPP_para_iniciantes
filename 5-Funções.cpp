@@ -1,11 +1,10 @@
 #include <iostream>
 
-int soma (int x, int y){
-	return x + y;
-}
-
 int main(){
-	std::cout << "O valor da soma é: " << soma(3,6) << '\n';
+	char caractere = {'a'};
+	std::cout << "O valor do caractere é: " << caractere << '\n';
+	std::cout << "O valor do caractere Maiusculo é: " << toupper( caractere) << '\n';	
+ 	caractere = toupper( caractere );
+ 	std::cout << "O valor do caractere é: " << caractere << '\n';
 	return 0;
 }
-
