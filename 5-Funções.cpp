@@ -1,11 +1,11 @@
 #include <iostream>
 
-void palavras (){
-	std::cout << "Hello World!" << '\n';
+int soma (int x, int y){
+	return x + y;
 }
 
 int main(){
-	palavras();
+	std::cout << "O valor da soma é: " << soma(3,6) << '\n';
 	return 0;
 }
 
