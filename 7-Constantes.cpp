@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #define hello "hello world!"
 
 int main(){
