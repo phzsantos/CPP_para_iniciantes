@@ -550,3 +550,122 @@ Usando prototipos nós damos mais velocidade para nossa aplicação.
 
 Uma dica de boa prática é indicar somente o tipo das variáveis passadas. 
 
+
+
+#--------------------------------------Nona Aula--------------------------------------# 
+
+### Cabeçalhos
+
+O número de cabeçalhos a serem usados em um programa é uma função de muitos fatores.
+Muitos desses fatores têm mais a ver com o modo como os arquivos são manipulados no
+sistema do que com o C++.
+
+#### Adicionando seu código em bibliotecas
+
+As bibliotecas criadas por você mesmo precisam estar entre “aspas duplas”, somente as do sistema que usa-se < >.
+
+```#include <iostream>```
+
+```#include "quadrado.h"``` // como já vimos as extensões de biblioteca também pode ser .hpp, .hh, …
+
+Exemplo:
+
+// main.cpp
+
+```#include <iostream>```
+
+```#include "quadrado.h"```
+
+```int main(){```
+
+```std::cout << "O produto de 9 x 3 é: " << produto(9, 3) << '\n';```
+
+```]```
+
+```return 0;```
+
+```}```
+
+```// quadrado.h```
+
+```int produto( int x, int y ){```
+
+```return x * y;```
+
+```}```
+
+### Caminho das bibliotecas do sistema
+
+As bibliotecas do sistema ficam no caminho: /usr/include/
+
+Ou seja se quisermos encontrar o arquivo que possuem a biblioteca <iostream>, basta pesquisarmos nesse diretório informado, exemplo:
+
+```find /usr/include/ -name “iostream.h”```
+
+Como essa biblioteca é padrão do C++, geralmente ela também pode estar o caminho das bibliotecas já inclusas pelo compilador, rode o comando: no diretório do compilador. Para descobrir
+
+```cpp -x c++ -v```
+
+// Ou
+
+```find /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/ -name "iostream"```
+
+Para saber se o arquivo conteém, por exemplo, a instrução cout que usamos, rode:
+
+```find /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/ -name "iostream" -exec grep 'cout' {} \;```
+
+Os comandos: cpp e c++ são links simbólicos para o comando g++ que por sua vez também linka para outro arquivo, mas todos em resumo são o mesmo binário.
+
+Você também pode descobrir quais bibliotecas o binário que você criou usa, exemplo de comando:
+
+```ldd nome_do_binario```
+
+Existem outras formas, mas falaremos mais sobre isso quando abordarmos: debug
+
+### Compilando multiplos arquivos
+
+Quando usamos protótipos, geralmente separamos o protótipo em um arquivo.h e a execução da função separamos em um arquivo.cpp de mesmo nome. Ou seja, o nosso código ficaria assim em resumo:
+
+**main.cpp**
+
+```#include <iostream>```
+
+```#include "quadrado.h"```
+
+```int main(){```
+
+```std::cout << "O produto de 9 x 9 é: " << produto(9, 9) << '\n';```
+
+```return 0;```
+
+```}```
+
+```quadrado.h```
+
+```int produto( int , int );```
+
+```quadrado.cpp```
+
+```int produto( int x, int y ){```
+
+```return x * y;```
+
+```}```
+
+```E compilamos somente os .cpp:```
+
+```g++ main.cpp quadrado.cpp -o binario_final```
+
+```./binario_final```
+
+Em alguns casos precisamos evitar de duplicar a inclusão do .h quando necessário indicar em vários arquivos, e isso veremos quando falarmos sobre diretivas.
+
+### Resumindo
+
+* Cabeçalhos é onde fica os prototipos
+
+* Vai ter um outro arquivo .cpp para colocar a função que já foi criada o prototipo no cabeçalho
+
+* Main cpp é onde fica apenas a função main
+
+* Para usar a função devemos no main.cpp incluir nossa biblioteca de prototipo e quando for compilar, compilar o main e o codigo que completa o prototipo. 
