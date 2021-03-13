@@ -669,3 +669,84 @@ Em alguns casos precisamos evitar de duplicar a inclusão do .h quando necessár
 * Main cpp é onde fica apenas a função main
 
 * Para usar a função devemos no main.cpp incluir nossa biblioteca de prototipo e quando for compilar, compilar o main e o codigo que completa o prototipo. 
+
+
+
+#--------------------------------------Decima Aula--------------------------------------#
+
+### Constantes em C++
+
+Em C++ , além de variáveis, nós podemos usar também números ou caracteres cujos valores não mudam. Eles são chamados de CONSTANTES. Constantes não são associados a lugares na memória. Assim como variáveis, constantes também têm tipos.
+
+Uma constante pode ser do tipo int, char , etc.
+
+**Forma literal - Utilizando a palavra chave const**
+
+```const hello = "Hello, literal constant!";```
+
+**Como Macros**
+
+Para declarar uma constante em C usa-se o identificador define com tralha # na frente dele, e é definido logo depois do cabeçalho fora das funções. Geralmente usa-se palavras em MAIÚSCULAS sem acento, sem c cedilha, sem traços, ...
+
+**Exemplo de uso de constantes em C++:**
+
+```#define HELLO "Hello, macro constant!"```
+
+Essa prática de declarar constantes como Macros é uma prática utilizada na linguagem C. De acordo com o histórico de erros em programas, percebeu-se que a maioria estava associada à essas constantes como macro. Logo, evite de usar constante como macros.
+
+**Vejamos um exemplo agora que engloba as duas formas:**
+
+```#include <iostream>```
+
+```#include <string>```
+
+```#define HELLO "Hello, constant!"```
+
+```using namespace std;```
+
+```int main(){```
+
+```const string hello = "Hello constant, again!";```
+
+```cout << "Constant Macro HELLO: " << HELLO << endl;```
+
+```cout << "Constant literal hello: " << hello << endl;```
+
+```return 0;```
+
+```}```
+
+### Outros tipos de escape
+
+Aproveitando que usamos um exemplo com newline , vamos conhecer outros códigos de
+escape de caractere único . Existem diversos, vamos mostrar todos e uma breve
+descrição do que cada um faz:
+
+|Código de Escape | Descrição |
+|-----------------|:---------:|
+\n | nova linha |
+\r | retorno de carro |
+\t | tab |
+\v | vertical tab |
+\b | backspace |
+\f | form feed (page feed) |
+\a | alert (beep) | 
+\\' | aspas simples (') |
+\\" | aspas duplas (") |
+\\? | interrogação (?) |
+\\\ | barras invertidas (\\) |
+
+### Resumindo
+
+* Não da para mudar o valor de uma constante se a mesma já tiver sido definida e declarada
+
+* Evitar usar o modo MACRO de definição de constantes
+
+* Constantes não são associadas a lugares na memoria
+
+* Declarar constantes melhora o desempenho do programa
+
+* MACRO auto identifica o tipo da constante, a forma literal não.
+
+
+

@@ -23,7 +23,7 @@
 - [x] Operadores e procedência
 - [x] Conceitos e criação de Funções
 - [x] Headers ou Cabeçalhos
-- [ ] Como atribuir valores Constantes
+- [x] Como atribuir valores Constantes
 - [ ] Conversão de dados de tipos
 - [ ] Arrays - Um estrutura de dados indexados
 - [ ] Coletando dados informados pelo usuário
