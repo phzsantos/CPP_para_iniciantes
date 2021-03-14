@@ -7,7 +7,7 @@
 **Country:** Brazil
 
 
-#--------------------------------------Primeira Aula--------------------------------------#
+#--------------------------------------1º Aula--------------------------------------#
 
 ### O que irei ver no curso:
 
@@ -27,7 +27,7 @@ Não! é perfeito começar com C++. Depois de passar por C++, vai ficar tudo mai
 
 
 
-#--------------------------------------Segunda Aula--------------------------------------#
+#--------------------------------------2º Aula--------------------------------------#
 
 ### O que é C++?
 
@@ -76,7 +76,7 @@ O grupo de desenvolvimento Boost.org trabalha para evoluir a biblioteca padrão,
 
 
 
-#--------------------------------------Terceira Aula--------------------------------------#
+#--------------------------------------3º Aula--------------------------------------#
 
 ### Como o C++ funciona?
 
@@ -113,7 +113,7 @@ LLVM -> Clang
 
 
 
-#--------------------------------------Quarta Aula--------------------------------------#
+#--------------------------------------4º Aula--------------------------------------#
 
 ### Meu primeiro programa em C++
 
@@ -167,7 +167,7 @@ Para se aprender qualquer linguagem de programação deve-se saber o basico do b
 
 
 
-#--------------------------------------Quinta Aula--------------------------------------#
+#--------------------------------------5º Aula--------------------------------------#
 
 ### Para que servem os comentarios 
 
@@ -190,7 +190,7 @@ O ideal é ele não não retornar nenhum erro e nenhum warn
 
 
 
-#--------------------------------------Sexta Aula--------------------------------------#
+#--------------------------------------6º Aula--------------------------------------#
 
 ### Variaveis em C++
 
@@ -305,7 +305,7 @@ Para as inicializações direta e uniforme ainda podemos usar o sinal de = para 
 
 
 
-#--------------------------------------Setima Aula--------------------------------------#  
+#--------------------------------------7º Aula--------------------------------------#  
 
 ### Operadores em C++
 
@@ -386,7 +386,7 @@ Alguns já vimos e isso facilitara a compreensão dos demais.
 
 
 
-#--------------------------------------Oitava Aula--------------------------------------# 
+#--------------------------------------8º Aula--------------------------------------# 
 
 ### Funções
 
@@ -552,7 +552,7 @@ Uma dica de boa prática é indicar somente o tipo das variáveis passadas.
 
 
 
-#--------------------------------------Nona Aula--------------------------------------# 
+#--------------------------------------9º Aula--------------------------------------# 
 
 ### Cabeçalhos
 
@@ -672,7 +672,7 @@ Em alguns casos precisamos evitar de duplicar a inclusão do .h quando necessár
 
 
 
-#--------------------------------------Decima Aula--------------------------------------#
+#--------------------------------------10º Aula--------------------------------------#
 
 ### Constantes em C++
 
@@ -750,3 +750,78 @@ descrição do que cada um faz:
 
 
 
+#--------------------------------------11º Aula--------------------------------------#
+
+### Conversão de tipos
+
+É possível converter dados de um tipo em outro. Isso é conhecido como conversão de tipo. Existem
+dois tipos de conversão de tipo em C++.
+
+**I.** Conversão implícita
+
+**II.** Conversão explícita (também conhecida como Type Casting)
+
+### Conversão implícita
+
+A conversão de tipo feita automaticamente pelo compilador é conhecida como conversão de tipo
+implícita. Esse tipo de conversão também é conhecido como conversão automática. Exemplo de conversão implícita:
+
+```double d = 3.96;```
+
+```int i = d;```
+
+```char a = 'a';```
+
+```std::cout << "Valor de d: " << d << '\n';```
+
+```std::cout << "Valor de i: " << i << '\n';```
+
+```i = a + i;```
+
+```std::cout << "Valor de a + i: " << i << '\n';```
+
+Como vimos no exemplo acima, a conversão de um tipo de dados para outro está sujeita à perda de dados. Isso acontece quando dados de um tipo maior são convertidos em dados de um tipo menor.
+
+### Conversão explícita de C ++
+
+Quando o usuário altera manualmente os dados de um tipo para outro, isso é conhecido como conversão
+explícita . Existem 2 formas principais de usar a conversão explícita em C++. São elas:
+
+Fundição do tipo C. Como o nome sugere, este tipo de fundição é herdada da linguagem C . Exemplos:
+int i, j;
+
+```double d = 9.87;```
+
+```i = (int)d; // notação “cast”```
+
+```j = int(d); // notação funcional```
+
+### Operadores de conversão de tipo
+
+Além desses dois tipos de notação, há também quatro operadores para conversão de tipo. Eles são conhecidos como operadores de conversão de tipo. Eles são:
+
+* static_cast → usa-se quando deseja converter tipos de dados numéricos.
+* dynamic_cast → geralmente usado para conversões com ponteiros de classe.
+* const_cast → use-se quando é necessário converter tipos entre constantes e variáveis.
+* reinterpret_cast – similar ao static_cast, mas não recomendado, pois nem todos os compiladores o
+reconhecem.
+
+A sintaxe de uso dele consiste em: nome_cast< novo_tipo > ( expressão )
+
+Exemplo de static_cast:
+
+```double d = 3.14;```
+
+```int i = static_cast<int>(d);```
+
+```d = static_cast<double>(i);```
+
+Exemplo de const_cast:
+
+```double d = 3.14;```
+
+```const int pi = const_cast<double&>(d); // Atenção para essa linha.```
+
+Para os exemplos de uso de dynamic_cast e reinterpret_cast precisaríamos abordar sobre classes e ponteiros, que veremos mais à frente.
+
+Nem todos os tipos podem ser convertidos, string para double, por exemplo, haverá erro ao compilar. Para saber o tipo de uma variável usa-se typeid().

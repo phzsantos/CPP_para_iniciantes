@@ -24,7 +24,7 @@
 - [x] Conceitos e criação de Funções
 - [x] Headers ou Cabeçalhos
 - [x] Como atribuir valores Constantes
-- [ ] Conversão de dados de tipos
+- [x] Conversão de dados de tipos
 - [ ] Arrays - Um estrutura de dados indexados
 - [ ] Coletando dados informados pelo usuário
 - [ ] Estruturas que avaliam Condições
