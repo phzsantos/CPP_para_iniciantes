@@ -825,3 +825,85 @@ Exemplo de const_cast:
 Para os exemplos de uso de dynamic_cast e reinterpret_cast precisaríamos abordar sobre classes e ponteiros, que veremos mais à frente.
 
 Nem todos os tipos podem ser convertidos, string para double, por exemplo, haverá erro ao compilar. Para saber o tipo de uma variável usa-se typeid().
+
+
+
+#--------------------------------------12º Aula--------------------------------------#
+
+### Arrays em C++
+
+O array é uma estrutura de dados indexada, que pode armazenar uma determinada quantidade de valores do mesmo tipo. Os dados armazenados em um array são chamados de itens do array.
+
+Em outras palavras, um Array pode ser definido como: Um conjunto de variáveis.
+
+```int exemplo[5] = {0, 1, 2, 3, 4}```
+
+Ou seja, exemplo é o nome do Array e ele pode possui 5 variáveis dentro dele que será alocada pelo número da posição, iniciando da posição 0 (zero). Como código C++, isso seria representado por:
+
+Poderia ser int, char, string,... Para esse exemplo vamos usar string
+
+```// Esse array de nome 'foo' é do tipo 'string' e possui 5 posições```
+
+```string foo[5];```
+
+**Um exemplo básico de um array seria:**
+
+```#include <iostream>```
+
+```int main(){```
+
+```std::string meuarray[3] = {"Elis", "Tim", "James"};```
+
+```std::cout << meuarray[1 + 1] << '\n';```
+
+```return 0;```
+
+```}```
+
+**Exemplo de Array bidimensional (Um tipo de Multidimensional):**
+
+```int multiarray[3][4] = {{0,1,2,3}, {4,5,6,7}, {8,9,10,11}};```
+
+```std::out << multiarray[1][2] << ‘\n’;```
+
+**forma simplificada, mas mais difícil de notar**
+
+```int x[3][4] = {0, 1 ,2 ,3 ,4 , 5 , 6 , 7 , 8 , 9 , 10 , 11}```
+
+### Passando Arrays para função em C++
+
+Um array por padrão é um ponteiro, que veremos mais à frente. Se imprimirmos um array sem informar o elemento, será informada a localização dele na memória:
+
+```int arr[] = {1, 22, 33 , 44, 55, 66};```
+
+```std::cout << "Imprimindo o array: " << arr << '\n';```
+
+**Podemos alterar ou incluir o elemento à um array após declará-lo:**
+
+```arr[2] = 99;```
+
+```std::cout << "Imprimindo o array de posição 2: " << arr[2] << '\n';```
+
+**Passando um array para uma função:**
+
+```void recebe_array( int array_param[] ){```
+
+```array_param[2] = 88;```
+
+```}```
+
+```int main(){```
+
+```int arr[] = {1, 11, 22 , 33, 44, 55};```
+
+```std::cout << "O elemento de posição 2 ANTES de chamar função é: " << arr[2] << '\n';```
+
+```recebe_array( arr );```
+
+```std::cout << "O elemento de posição 2 DEPOIS de chamar função é: " << arr[2] << '\n';```
+
+```return 0;```
+
+```}```
+
+Para se medir o tamanho de um array utilizamos a função sizeof() e para imprimir todos elementos, veremos quando falarmos sobre loop. Também fique atento à semântica.
