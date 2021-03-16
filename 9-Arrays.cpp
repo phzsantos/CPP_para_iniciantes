@@ -40,5 +40,12 @@ int main(){
 	std::cout << "este é valor da posição do meu array DEPOIS da função: " << numeros[3] << '\n';
 
 
+	std::cout << "este é o tamanho do array: " << sizeof(numeros) << '\n';
+	// sizeof nunca vai vir a quantidade correta, você tem que fazer uma conta, total de elementos/tamanho elemento 0
+	// Especialmente em funções, sizeof vem totalmente errado. Deve-se ter cuidado com isso.
+
+	std::cout << "esta é a quantidade real do array: " << sizeof(numeros) / sizeof(numeros[0]) << '\n';
+	// Esse é o jeito de calcular a quantidade de um array.
+
 	return 0;
 }
