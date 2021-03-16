@@ -1,5 +1,11 @@
 #include <iostream>
 
+void recebe_array(int arr[]){
+	arr[3] = 44;
+}
+
+
+
 int main(){
 	int numeros[5] = {0, 11, 22, 33, 44}; //Aqui ou você coloca a quantidade certa do array ou coloca vazio
 	std::cout << "este é valor da posição do meu array: " << numeros << '\n';
@@ -24,6 +30,15 @@ int main(){
 
 	std::cout << "este é valor da posição do meu array: " << multi[1][1] << '\n';
 	// De qual array e de qual posição
+
+
+
+	std::cout << "este é valor da posição do meu array ANTES da função: " << numeros[3] << '\n';
+
+	recebe_array(numeros);
+
+	std::cout << "este é valor da posição do meu array DEPOIS da função: " << numeros[3] << '\n';
+
 
 	return 0;
 }
