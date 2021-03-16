@@ -19,5 +19,11 @@ int main(){
 	std::cout << "este é valor da posição do meu array: " << numeros[1 + 1] << '\n';
 	// Podemos andar com a posição do array desse jeito. 
 
+	int multi[3][3] = { { 0, 1, 2 } , { 0, 3, 4 } , { 0, 5, 6 } };
+	// Assim que nos criamos varios arrays em 1 só , 3 arrays de 3 elementos cada 
+
+	std::cout << "este é valor da posição do meu array: " << multi[1][1] << '\n';
+	// De qual array e de qual posição
+
 	return 0;
 }
