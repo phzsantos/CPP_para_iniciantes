@@ -27,7 +27,7 @@
 - [x] Conversão de dados de tipos
 - [x] Arrays - Um estrutura de dados indexados
 - [x] Coletando dados informados pelo usuário
-- [ ] Estruturas que avaliam Condições
+- [x] Estruturas que avaliam Condições
 - [ ] Controles de Fluxo de Repetições
 - [ ] Diretivas, pré-compiladores
 - [ ] Obtendo endereços de memória com Ponteiros

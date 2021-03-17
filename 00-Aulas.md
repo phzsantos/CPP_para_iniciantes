@@ -912,6 +912,8 @@ Para se medir o tamanho de um array utilizamos a função sizeof() e para imprim
 
 #--------------------------------------13º Aula--------------------------------------#
 
+### Inputs 
+
 Em determinadas ocasiões, deseja-se coletar dados , para isso usamos o std::cin redirecionando para uma variável:
 
 ```char letra {};```
@@ -928,3 +930,111 @@ Esta função remove o delimitador do stream (isto é, lê o caractere e o desca
 
 Para captar uma palavra ou frase, precisamos utilizar a função getline definir nosso char como array, ou uma string com getline de 2 formas. Vamos ver exemplos na prática.
 
+
+
+#--------------------------------------14º Aula--------------------------------------#
+
+### Condições
+
+Nesse tópico iremos ver conceitos de if, else, else if e case
+
+Condições são expressões que avaliam um valor booleano - um valor verdadeiro ou falso (true e false são palavras-chave em C++, representando os dois valores possíveis de uma expressão ou variável booleana).
+
+Condições simples envolvem dois operandos, cada um dos quais pode ser uma variável ou um valor literal, e um operador, normalmente um operador de comparação.
+
+Os operadores de comparação são mostrados abaixo
+
+| Operador | Descrição|
+|----------|:---------|
+| == | Verdadeiro se e somente se operando da esquerda for igual ao operando à direita |
+| != | True se e somente se operando da esquerda não for igual ao operando à direita |
+| > | True se e somente se o operando esquerdo for maior que o operando direito |
+| < | True se e somente se operando a esquerda for menor que o operando direito|
+| >= | True se e somente se o operando esquerdo for maior ou igual ao operando direito |
+| <= | True se e somente se operando esquerdo for menor ou igual que operando direito |
+
+### switch case break
+
+A instrução switch fornece um mecanismo conveniente para executar um dos vários fragmentos possíveis de código, dependendo do valor de uma variável ou expressão integral.
+
+Um exemplo típico que ilustra o uso da instrução switch é manipular uma seleção de menu. Em uma interface baseada em texto, um programa pode apresentar ao usuário um menu de opções e solicitar ao usuário que selecione uma opção.
+
+O switch só deve ser usado para comparações exatas.
+
+```
+#include <iostream>
+using namespace std;
+
+main(){
+	// o número máximo de 10 algarismos será: 2147483647
+	int num;
+	cout << "Digite um número: " << endl;
+	cin >> num;
+	// início das condições
+	switch(num){
+		case 0:
+			cout << "O número é zero" << endl;
+			break;
+		case 1:
+			cout << "O número é 1" << endl;
+			break;
+		default:
+			cout << "REVELAÇÃO DO NÚMERO: " << num << endl;
+			break;
+ 	}
+}
+```
+
+### Operador Ternário
+
+O operador ternário fornece uma maneira compacta e conveniente de escrever uma expressão que produz dois valores possíveis, dependendo de uma determinada condição. A sintaxe genérica deste operador é a seguinte: condition ? expression1 : expression2 , exemplo:
+
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+	int num = 10;
+
+	// Usando operador ternário
+	num > 10 ? cout << "sim" : cout << "não";
+	cout << endl;
+
+	// Ou
+	cout << ( num > 10 ? "SIM" : "NÃO" ) << ‘\n’;
+
+	return 0;
+}
+```
+
+### Comparação
+
+```
+#include <iostream>
+
+int main(){
+
+ int num = 9;
+ if( num > 9 ){
+ std::cout << "IF: 'num' é maior que 9!" << '\n';
+ }else{
+ std::cout << "ELSE: 'num' é MENOR ou IGUAL que nove." << '\n';
+ }
+ switch( num ){
+	 // Não usa-se parênteses aqui
+	 case 1 ... 8:
+		std::cout << "SWITCH: 'num' é MENOR que 9!" << '\n';
+		// obrigatório em todos os cases, caso contrário imprimirá todos
+		break;
+	 // Essa range tem de começar com um número maior que oito
+	 case 10 ... 1000:
+	 	std::cout << "SWITCH: 'num' é MAIOR que nove." << '\n';
+	 	break;
+	 default:
+		std::cout << "SWITCH: 'num' é IGUAL a nove." << '\n';
+		break;
+ }
+ std::cout << ( num > 9 ? "TERNARY: É maior que 9!" : "TERNARY: É MENOR ou IGUAL que nove." ) << '\n';
+ return 0;
+}
+```
