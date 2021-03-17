@@ -26,7 +26,7 @@
 - [x] Como atribuir valores Constantes
 - [x] Conversão de dados de tipos
 - [x] Arrays - Um estrutura de dados indexados
-- [ ] Coletando dados informados pelo usuário
+- [x] Coletando dados informados pelo usuário
 - [ ] Estruturas que avaliam Condições
 - [ ] Controles de Fluxo de Repetições
 - [ ] Diretivas, pré-compiladores

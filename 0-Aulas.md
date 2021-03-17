@@ -907,3 +907,24 @@ Um array por padrão é um ponteiro, que veremos mais à frente. Se imprimirmos 
 ```}```
 
 Para se medir o tamanho de um array utilizamos a função sizeof() e para imprimir todos elementos, veremos quando falarmos sobre loop. Também fique atento à semântica.
+
+
+
+#--------------------------------------13º Aula--------------------------------------#
+
+Em determinadas ocasiões, deseja-se coletar dados , para isso usamos o std::cin redirecionando para uma variável:
+
+```char letra {};```
+
+```std::cout << "Informe uma letra: ";```
+
+```std::cin >> letra;```
+
+```std::cout << "A letra que você digitou foi: " << letra << "\n";```
+
+No entanto, o operador >> sobrecarregado ignora tais caracteres. Para englobar essas situações, C++ oferece o uso da função-membro getline.
+
+Esta função remove o delimitador do stream (isto é, lê o caractere e o descarta) e armazena o mesmo em uma variável definida pelo usuário.
+
+Para captar uma palavra ou frase, precisamos utilizar a função getline definir nosso char como array, ou uma string com getline de 2 formas. Vamos ver exemplos na prática.
+
