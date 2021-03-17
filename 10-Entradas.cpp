@@ -17,5 +17,6 @@ int main(){
 	std::getline( std::cin , texto);
 	// Essa é a forma de pegar um input inteiro no formato de string. 
 
-	std::cout << "A texto que você digitou foi: " << texto << '\n'; 
+	std::cout << "A texto que você digitou foi: " << texto << '\n';
+	return 0; 
 }
