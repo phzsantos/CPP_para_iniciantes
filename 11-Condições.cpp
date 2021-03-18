@@ -38,5 +38,11 @@ int main(){
 			break;
 	}
 
+
+
+	//Operador ternario (apenas if e else)
+	cout << ( var > 10 ? "Var é maior que dez" : "Var é menor que dez") << '\n';
+
+
 	return 0;
 }
