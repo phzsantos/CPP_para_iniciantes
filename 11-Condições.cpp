@@ -33,6 +33,10 @@ int main(){
 			cout << "O valor de var é 31!" << '\n';
 			break;
 
+		case 1 ... 8: // Isso aqui é um range em C++
+			cout << "O numero está entre 1 e 8, ele é: " << var << '\n';
+			break;
+
 		default:
 			cout << "Você digitou uma letra/numero que não é 30 nem 31." << '\n';
 			break;
@@ -41,7 +45,7 @@ int main(){
 
 
 	//Operador ternario (apenas if e else)
-	cout << ( var > 10 ? "Var é maior que dez" : "Var é menor que dez") << '\n';
+	cout << ( var >= 10 ? "Var é maior ou igual a dez" : "Var é menor que dez") << '\n';
 
 
 	return 0;
