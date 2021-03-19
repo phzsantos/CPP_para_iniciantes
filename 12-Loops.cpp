@@ -22,7 +22,7 @@ int main(){
 	}while (numero <= 20);
 	*/
 
-
+	/*
 	// For
 	for ( int i = {1}; i <= 10; i++){
 		std::cout << "Esse número é o " << i << '\n';
@@ -56,5 +56,16 @@ int main(){
     	std::cout << '\n';
 
 	}
+	*/
+
+
+	// For com auto
+	std:: string cantores[] = {"Chester Bennington", "Chris Cornell", "Bruce Dickinson", "James Hatfield"};
+	int numeros[] = {11, 22, 33, 44, 55};
+
+	for ( auto i : cantores ){ // auto pega o tipo automaticamente; lê-se auto para cantores; 
+		std::cout << "O " << i << " é " << i << '\n';
+	}
+
 	return 0;
 }
