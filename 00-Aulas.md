@@ -1038,3 +1038,60 @@ int main(){
  return 0;
 }
 ```
+
+
+
+#--------------------------------------15º Aula--------------------------------------#
+
+### Loops
+
+Como a maioria das linguagens de programação, o C++ fornece estruturas de controle de fluxo para implementar a repetição. Essas estruturas de controle, geralmente conhecidas como loops, nos permitem escrever blocos de código que são executados um determinado número de vezes, ou simplesmente executados até que determinada condição seja atendida.
+
+### while
+
+Uma instrução de loop while executa repetidamente uma instrução de destino, desde que uma determinada condição seja verdadeira.
+
+### do while
+
+A diferença entre while e do while é que while primeiro testa a expressão primeiro e só depois
+entra no loop. Já o do while primeiro entra no loop e só depois testa a expressão.
+
+### for 
+
+O loop for é bastante utilizado de diversas formas.
+
+Existe uma outra forma de criar loops com o tipo auto onde obteremos mais informações no Curso Avançado quando falarmos sobre typedef. O for é muito utilizado com loops aninhados.
+
+#### for range
+
+```
+std::string str_array[] = {"Tim Maia", "Elis Regina", "James Brown", "Marvin Gaye",
+"George Benson", "Nina Simone"};
+int num_array[] = {11, 2, 9, 17, 12, 89, 13, 52, 8, 4, 79};
+for (auto n : str_array) {
+	std::cout << "\u2192 " << n << " ";
+}
+std::cout << '\n';
+for( int i : num_array ){
+	std::cout << "[" << i << "] ";
+}
+std::cout << '\n';
+```
+
+#### for aninhado
+
+```
+#include <iostream>
+int main() {
+	for( int i = 0; i < 8; i++ ){
+		for( int k = 0; k < i + 1; k++ ){
+			std::cout << "*";
+		}
+		for( int j = 8 ; j > 0; j-- ){
+			std::cout << " ";
+		}
+		std::cout << '\n';
+	}
+	return 0;
+}
+```

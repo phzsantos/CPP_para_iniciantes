@@ -28,7 +28,7 @@
 - [x] Arrays - Um estrutura de dados indexados
 - [x] Coletando dados informados pelo usuário
 - [x] Estruturas que avaliam Condições
-- [ ] Controles de Fluxo de Repetições
+- [x] Controles de Fluxo de Repetições
 - [ ] Diretivas, pré-compiladores
 - [ ] Obtendo endereços de memória com Ponteiros
 - [ ] A classe vector
