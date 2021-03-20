@@ -1084,3 +1084,71 @@ int main(){
 	return 0;
 }
 ```
+
+
+
+#--------------------------------------17º Aula--------------------------------------#
+
+### Ponteiros
+
+Ponteiros são variáveis capaz de armazenar endereços de memória. Usamos ponteiros quando precisamos manipular a memória diretamente. A memória RAM é divida em quatro partes:
+
+* Área do código, onde o programa compilado reside;
+* Área global, onde residem as variáveis globais;
+* Área da pilha, onde os parâmetros de funções e variáveis
+locais residem;
+* Área da heap, onde as variáveis dinâmicas residem.
+
+| Memoria RAM|
+|-|
+|Pilha|
+|Memoria livre|
+|Heap|
+|Global|
+|codigo|
+
+* a função main() e todas as funções ficam na
+pilha;
+* O espaço necessário para cada variável depende
+do seu tipo.
+
+### Ponteiro na pratica
+
+* O tipo dos ponteiros precisam ser do mesmo tipo da variável que ele está apontando; 
+* Ponteiros de arrays, precisam apontar para um elemento do array;
+* Sempre que puder usar ponteiro, use-o!
+* Ponteiros são uma peça chave para o desempenho dos seus programas C/C++.
+
+#### Syntax para criar um ponteiro:
+
+```
+#include <iostream>
+
+int alfa = {10};
+int * beta = &alfa; // Isso aqui é um ponteiro. 
+
+int main(){
+    std::cout << "Esse é o valor de beta que é igual alfa: " << *beta << '\n'; // Tem que colocar o asterisco na frente, porquê se não colocar ele vai exibir o endereço de memoria e não o conteudo.
+    return 0;
+}
+```
+
+#### O que é um ponteiro e quando usar?
+
+Um ponteiro é nada mais do que um link simbolico ou um atalho, é como se você "Copiasse" o conteudo de uma pasta, mas sem copiar, apenas criar um atalho para acessar o mesmo conteudo só que em outro lugar. Quando você precisar copiar o valor de uma variavel para outra.
+
+#### Ponteiros vs Copia de conteudo:
+
+Copiando variavel (Criando um novo endereço na memoria deixando mais lento):
+
+```
+string var1 = “Meu conteúdo”;
+string var2 = var1;
+```
+
+Copiando variavel com ponteiro (Sem criar um novo endereço na memoria, mais rapido):
+
+```
+string var1 = “Meu conteúdo”;
+string * var2 = &var1;  
+```
