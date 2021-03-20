@@ -1095,3 +1095,31 @@ int main() {
 	return 0;
 }
 ```
+
+
+
+#--------------------------------------16º Aula--------------------------------------#
+
+### Diretivas em C++
+
+Elas são processadas antes da compilação do código propriamente dito. De uma maneira geral elas instruem o compilador de algumas ações que devem ser feitas com o código.
+
+Exemplos de diretivas:
+
+`#include, #define, #ifdef, #ifndef, #else, #endif, #if, #elif, #pragma, #line, #error, #undef ...`
+
+Exemplo de um código com diretivas:
+
+```
+#include <iostream>
+#ifndef TEST
+#include "fdir.h"
+#endif
+
+int main(){
+	std::cout << "TESTE DEFINIDO" << '\n';
+	std::cout << "Não definido" << '\n';
+	fdir();
+	return 0;
+}
+```

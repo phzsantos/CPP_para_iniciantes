@@ -29,7 +29,7 @@
 - [x] Coletando dados informados pelo usuário
 - [x] Estruturas que avaliam Condições
 - [x] Controles de Fluxo de Repetições
-- [ ] Diretivas, pré-compiladores
+- [x] Diretivas, pré-compiladores
 - [ ] Obtendo endereços de memória com Ponteiros
 - [ ] A classe vector
 - [ ] Argumentos via Linha de Comando
