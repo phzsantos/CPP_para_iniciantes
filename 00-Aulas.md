@@ -149,15 +149,15 @@ Para se aprender qualquer linguagem de programação deve-se saber o basico do b
 
 **Para compilar o programa renomeando ele como quiser:**
 
-```g++ nomedoprogramaasercompilado -o nomedoprogramaquevocêquiser```
+`g++ nomedoprogramaasercompilado -o nomedoprogramaquevocêquiser`
 
 **Se você não usar "-o" para nomear o programa compilado ele vai criar um arquivo:**
 
-```a.out```
+`a.out`
 
 **Para mais detalhes durante a compilação:**
 
-```g++ -v nomedoprogramaasercompilado```
+`g++ -v nomedoprogramaasercompilado`
 
 ### Extensões em C++
 
@@ -177,14 +177,14 @@ O compilador ignora os comentarios, onde estiver comentado ele não lê.
 
 ### Tipos de comentarios
 
-* ```//```= Começou no C++, ele é usado para comentar uma linha apenas
-* ```/* */```= Este é usado para comentar um bloco inteiro de codigo.
+* `//`= Começou no C++, ele é usado para comentar uma linha apenas
+* `/* */`= Este é usado para comentar um bloco inteiro de codigo.
 
 ### Para forçar o programa a mostrar warnings, caso hajam:
 
 **Compile usando:**
 
-```g++ -Werror nomedoprograma -o nomequevocêquiser```
+`g++ -Werror nomedoprograma -o nomequevocêquiser`
 
 O ideal é ele não não retornar nenhum erro e nenhum warn 
 
@@ -210,13 +210,13 @@ Variaveis, como o proprio nome já diz, o conteudo dela pode variar de acordo co
 
 Para criar uma variavel, usamos um tipo especial de instrução de declaração chamada definição (definição é diferente de declaração)
 
-```int x;```
+`int x;`
 
 Ao definir uma variavel, mesmo que não atibuirmos valor a ela, a mesma já possuira uma instancia apos compilada(runtime = tempo de execução), ou seja, já havera um espaço/endereço reservado para ela na memoria RAM.
 
 É possivel declarar multiplas variaveis de mesmo tipo, exemplos:
 
-```char x, y, z;```
+`char x, y, z;`
 
 Para criar um nome de variavel deve-se respeitar as seguintes regras:
 
@@ -236,7 +236,7 @@ Inicie suas variaveis somente com letras;
 
 ### Compilando com -Werror e -Wall para transformar warns em erros 
 
-```g++ -Werror -Wall nomedoprograma -o nomequevocêquiser```
+`g++ -Werror -Wall nomedoprograma -o nomequevocêquiser`
 
 ### Declaração e inicialização de variaveis em C++
 
@@ -249,11 +249,11 @@ Observação: É importante você ficar atento algumas nomenclaturas do C++ se v
 
 Exemplo de declaração de acordo com os exemplos anteriores:
 
-```int x = 3;```
-
-```char letra_inicial = 'a';```
-
-```double y = 69.03;```
+```
+int x = 3;
+char letra_inicial = ‘a’;
+double _y = 69.03; 
+```
 
 Outra coisa importante é você não pode declarar uma mesma variavel 2 vezes, isso nem gera warning pelo compilador e sim um Error e seu codigo não compila. Mas você pode alterar o valor da variavel.
 
@@ -285,7 +285,7 @@ Em muitos lugares você obterá a informação de variaveis citando: lvalue(lado
 
 lvalue vs rvalue
 
-```int x = { 10 };``` 
+`int x = { 10 };` 
 
 **Inicialização de copia:** int x = 10;
 
@@ -295,13 +295,13 @@ lvalue vs rvalue
 
 É possivel (e preferivel) inicializar uma variavel sempre que definirmos, caso não haja um valor pré-definido, inicialize de forma vazia, exemplos:
 
-```double z {};```
+```
+double z {};
+char gun = “”;
+int x();
+```
 
-```char gun = "";```
-
-```int x();```
-
-Para as inicializações direta e uniforme ainda podemos usar o sinal de = para separar o lvalue do rvalue, exemplo: double z = { 36.09 };, isso continua sendo uniforme mesmo tendo igual. 
+Para as inicializações direta e uniforme ainda podemos usar o sinal de = para separar o lvalue do rvalue, exemplo: `double z = { 36.09 };`, isso continua sendo uniforme mesmo tendo igual. 
 
 
 
@@ -411,38 +411,32 @@ sublinhado).
 
 **Hello World só que em forma de função:**
 
-```#include <iostream>```
+```
+#include <iostream>
+using namespace std;
 
-```using namespace std;```
+// criamos a função
+void minha_funcao(){
+	cout << "Olá, mundo!\n";
+}
 
-```// criamos a função```
-
-```void minha_funcao(){```
-
-```cout << "Olá, mundo!\n";```
-
-```}```
-
-```main(){```
-
-```// chamamos a função```
-
-```minha_funcao();```
-
-```}```
+main(){
+	// chamamos a função
+	minha_funcao();
+}
+```
 
 ### Tipos de funções em C++
 
 O tipo de uma função está diretamente relacionado ao tipo de retorno
 da função. Funções tipo void não tem e não devem ter retorno.
 
-```void minha_funcao(){```
-
-```std::cout << “Eu sou uma função” << ‘\n’;```
-
-```return 0; // erro```
-
-```}```
+```
+void minha_funcao(){
+	std::cout << “Eu sou uma função” << ‘\n’;
+	return 0; // erro
+}
+```
 
 Mas todos os tipos que podemos atribuir à variáveis também são
 atribuíveis à funções: int, std::string, float, bool e void.
@@ -452,50 +446,40 @@ criação para nomes de função.
 
 Parâmetros de funções são valores que devem ser passados para ela.
 
-```#include <iostream>```
+```
+#include <iostream>
+using namespace std;
 
-```using namespace std;```
+// criamos a função
+int soma( int x, int y ){
+	return x + y;
+}
 
-```// criamos a função```
-
-```int soma( int x, int y ){```
-
-```return x + y;```
-
-```}```
-
-```int main(){```
-
-```// chamamos a função```
-
-```cout << soma(3, 6) << ‘\n’```
-
-```return 0;```
-
-```}```
+int main(){
+	// chamamos a função
+	cout << soma(3, 6) << ‘\n’
+	return 0;
+}
+```
 
 Funções da biblioteca padrão: STL(Standard Template Library) do C++ e de outras bibliotecas.
 Vamos conhecer algumas como:
 
 Converter para MAIÚSCULA: toupper()
 
-```#include <iostream>```
+```
+#include <iostream>
 
-```int main(){```
+int main(){
+	char a = 'a';
+	std::cout << a << '\n';
 
-```char a = 'a';```
-
-```std::cout << a << '\n';```
-
-```std::cout << toupper( a ) << '\n';```
-
-```a = toupper( a );```
-
-```std::cout << a << '\n';```
-
-```return 0;```
-
-```}```
+	std::cout << toupper( a ) << '\n';
+	a = toupper( a );
+	std::cout << a << '\n';
+	return 0;
+}
+```
 
 E entre outras como: tolower(), abs(), isalpha(), isdigit(), … que veremos ao decorrer do curso e quando vermos sobre cabeçalhos.
 
@@ -530,23 +514,20 @@ Usando prototipos nós damos mais velocidade para nossa aplicação.
 
 **Exemplo de uma função com protótipo:**
 
-```#include <iostream>```
+```
+#include <iostream>
 
-```int produto( int x, int y );```
+int produto( int x, int y );
 
-```int main(){```
+int main(){
+	std::cout << "O produto de 369 x 936 é: " << produto(369, 936) << '\n';
+	return 0;
+}
 
-```std::cout << "O produto de 369 x 936 é: " << produto(369, 936) << '\n';```
-
-```return 0;```
-
-```}```
-
-```int produto( int x, int y ){```
-
-```return x * y;```
-
-```}```
+int produto( int x, int y ){
+	return x * y;
+}
+```
 
 Uma dica de boa prática é indicar somente o tipo das variáveis passadas. 
 
@@ -564,35 +545,28 @@ sistema do que com o C++.
 
 As bibliotecas criadas por você mesmo precisam estar entre “aspas duplas”, somente as do sistema que usa-se < >.
 
-```#include <iostream>```
-
-```#include "quadrado.h"``` // como já vimos as extensões de biblioteca também pode ser .hpp, .hh, …
+```
+#include <iostream>
+#include "quadrado.h" // como já vimos as extensões de biblioteca também pode ser .hpp, .hh, …
+```
 
 Exemplo:
 
+```
 // main.cpp
+#include <iostream>
+#include "quadrado.h"
 
-```#include <iostream>```
+int main(){
+	std::cout << "O produto de 9 x 3 é: " << produto(9, 3) << '\n';
+	return 0;
+}
 
-```#include "quadrado.h"```
-
-```int main(){```
-
-```std::cout << "O produto de 9 x 3 é: " << produto(9, 3) << '\n';```
-
-```]```
-
-```return 0;```
-
-```}```
-
-```// quadrado.h```
-
-```int produto( int x, int y ){```
-
-```return x * y;```
-
-```}```
+// quadrado.h
+int produto( int x, int y ){
+	return x * y;
+} 
+```
 
 ### Caminho das bibliotecas do sistema
 
@@ -600,25 +574,25 @@ As bibliotecas do sistema ficam no caminho: /usr/include/
 
 Ou seja se quisermos encontrar o arquivo que possuem a biblioteca <iostream>, basta pesquisarmos nesse diretório informado, exemplo:
 
-```find /usr/include/ -name “iostream.h”```
+`find /usr/include/ -name “iostream.h”`
 
 Como essa biblioteca é padrão do C++, geralmente ela também pode estar o caminho das bibliotecas já inclusas pelo compilador, rode o comando: no diretório do compilador. Para descobrir
 
-```cpp -x c++ -v```
+`cpp -x c++ -v`
 
 // Ou
 
-```find /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/ -name "iostream"```
+`find /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/ -name "iostream"`
 
 Para saber se o arquivo conteém, por exemplo, a instrução cout que usamos, rode:
 
-```find /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/ -name "iostream" -exec grep 'cout' {} \;```
+`find /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/ -name "iostream" -exec grep 'cout' {} \;`
 
 Os comandos: cpp e c++ são links simbólicos para o comando g++ que por sua vez também linka para outro arquivo, mas todos em resumo são o mesmo binário.
 
 Você também pode descobrir quais bibliotecas o binário que você criou usa, exemplo de comando:
 
-```ldd nome_do_binario```
+`ldd nome_do_binario`
 
 Existem outras formas, mas falaremos mais sobre isso quando abordarmos: debug
 
@@ -628,35 +602,35 @@ Quando usamos protótipos, geralmente separamos o protótipo em um arquivo.h e a
 
 **main.cpp**
 
-```#include <iostream>```
+```
+#include <iostream>
+#include "quadrado.h"
 
-```#include "quadrado.h"```
+int main(){
+	std::cout << "O produto de 9 x 9 é: " << produto(9, 9) << '\n';
+	return 0;
+}
+```
 
-```int main(){```
+**quadrado.h**
 
-```std::cout << "O produto de 9 x 9 é: " << produto(9, 9) << '\n';```
+`int produto( int , int );`
 
-```return 0;```
 
-```}```
+**quadrado.cpp**
 
-```quadrado.h```
+```
+int produto( int x, int y ){
+	return x * y;
+}
+```
 
-```int produto( int , int );```
+**E compilamos somente os .cpp:**
 
-```quadrado.cpp```
-
-```int produto( int x, int y ){```
-
-```return x * y;```
-
-```}```
-
-```E compilamos somente os .cpp:```
-
-```g++ main.cpp quadrado.cpp -o binario_final```
-
-```./binario_final```
+```
+g++ main.cpp quadrado.cpp -o binario_final```
+./binario_final
+```
 
 Em alguns casos precisamos evitar de duplicar a inclusão do .h quando necessário indicar em vários arquivos, e isso veremos quando falarmos sobre diretivas.
 
@@ -682,7 +656,7 @@ Uma constante pode ser do tipo int, char , etc.
 
 **Forma literal - Utilizando a palavra chave const**
 
-```const hello = "Hello, literal constant!";```
+`const hello = "Hello, literal constant!";`
 
 **Como Macros**
 
@@ -690,31 +664,25 @@ Para declarar uma constante em C usa-se o identificador define com tralha # na f
 
 **Exemplo de uso de constantes em C++:**
 
-```#define HELLO "Hello, macro constant!"```
+`#define HELLO "Hello, macro constant!"`
 
 Essa prática de declarar constantes como Macros é uma prática utilizada na linguagem C. De acordo com o histórico de erros em programas, percebeu-se que a maioria estava associada à essas constantes como macro. Logo, evite de usar constante como macros.
 
 **Vejamos um exemplo agora que engloba as duas formas:**
 
-```#include <iostream>```
+```
+#include <iostream>
+#include <string>
+#define HELLO "Hello, constant!"
+using namespace std;
 
-```#include <string>```
-
-```#define HELLO "Hello, constant!"```
-
-```using namespace std;```
-
-```int main(){```
-
-```const string hello = "Hello constant, again!";```
-
-```cout << "Constant Macro HELLO: " << HELLO << endl;```
-
-```cout << "Constant literal hello: " << hello << endl;```
-
-```return 0;```
-
-```}```
+int main(){
+	const string hello = "Hello constant, again!";
+	cout << "Constant Macro HELLO: " << HELLO << endl;
+	cout << "Constant literal hello: " << hello << endl;
+	return 0;
+}
+```
 
 ### Outros tipos de escape
 
@@ -766,19 +734,15 @@ dois tipos de conversão de tipo em C++.
 A conversão de tipo feita automaticamente pelo compilador é conhecida como conversão de tipo
 implícita. Esse tipo de conversão também é conhecido como conversão automática. Exemplo de conversão implícita:
 
-```double d = 3.96;```
-
-```int i = d;```
-
-```char a = 'a';```
-
-```std::cout << "Valor de d: " << d << '\n';```
-
-```std::cout << "Valor de i: " << i << '\n';```
-
-```i = a + i;```
-
-```std::cout << "Valor de a + i: " << i << '\n';```
+``` 
+double d = 3.96;
+int i = d;
+char a = 'a';
+std::cout << "Valor de d: " << d << '\n';
+std::cout << "Valor de i: " << i << '\n';
+i = a + i;
+std::cout << "Valor de a + i: " << i << '\n';
+```
 
 Como vimos no exemplo acima, a conversão de um tipo de dados para outro está sujeita à perda de dados. Isso acontece quando dados de um tipo maior são convertidos em dados de um tipo menor.
 
@@ -790,11 +754,12 @@ explícita . Existem 2 formas principais de usar a conversão explícita em C++.
 Fundição do tipo C. Como o nome sugere, este tipo de fundição é herdada da linguagem C . Exemplos:
 int i, j;
 
-```double d = 9.87;```
-
-```i = (int)d; // notação “cast”```
-
-```j = int(d); // notação funcional```
+```
+int i, j;
+double d = 9.87;
+i = (int)d; // notação “cast”
+j = int(d); // notação funcional
+```
 
 ### Operadores de conversão de tipo
 
@@ -810,17 +775,18 @@ A sintaxe de uso dele consiste em: nome_cast< novo_tipo > ( expressão )
 
 Exemplo de static_cast:
 
-```double d = 3.14;```
-
-```int i = static_cast<int>(d);```
-
-```d = static_cast<double>(i);```
+```
+double d = 3.14;
+int i = static_cast<int>(d);
+d = static_cast<double>(i);
+```
 
 Exemplo de const_cast:
 
-```double d = 3.14;```
-
-```const int pi = const_cast<double&>(d); // Atenção para essa linha.```
+```
+double d = 3.14;
+const int pi = const_cast<double&>(d); // Atenção para essa linha.
+```
 
 Para os exemplos de uso de dynamic_cast e reinterpret_cast precisaríamos abordar sobre classes e ponteiros, que veremos mais à frente.
 
@@ -836,75 +802,71 @@ O array é uma estrutura de dados indexada, que pode armazenar uma determinada q
 
 Em outras palavras, um Array pode ser definido como: Um conjunto de variáveis.
 
-```int exemplo[5] = {0, 1, 2, 3, 4}```
+`int exemplo[5] = {0, 1, 2, 3, 4}`
 
 Ou seja, exemplo é o nome do Array e ele pode possui 5 variáveis dentro dele que será alocada pelo número da posição, iniciando da posição 0 (zero). Como código C++, isso seria representado por:
 
 Poderia ser int, char, string,... Para esse exemplo vamos usar string
 
-```// Esse array de nome 'foo' é do tipo 'string' e possui 5 posições```
-
-```string foo[5];```
+```
+// Esse array de nome 'foo' é do tipo 'string' e possui 5 posições
+string foo[5]; 
+```
 
 **Um exemplo básico de um array seria:**
 
-```#include <iostream>```
+```
+#include <iostream>
 
-```int main(){```
-
-```std::string meuarray[3] = {"Elis", "Tim", "James"};```
-
-```std::cout << meuarray[1 + 1] << '\n';```
-
-```return 0;```
-
-```}```
+int main(){
+	std::string meuarray[3] = {"Elis", "Tim", "James"};
+	std::cout << meuarray[1 + 1] << '\n';
+	return 0;
+}
+```
 
 **Exemplo de Array bidimensional (Um tipo de Multidimensional):**
 
-```int multiarray[3][4] = {{0,1,2,3}, {4,5,6,7}, {8,9,10,11}};```
-
-```std::out << multiarray[1][2] << ‘\n’;```
+```
+int multiarray[3][4] = {{0,1,2,3}, {4,5,6,7}, {8,9,10,11}};
+std::out << multiarray[1][2] << ‘\n’; 
+```
 
 **forma simplificada, mas mais difícil de notar**
 
-```int x[3][4] = {0, 1 ,2 ,3 ,4 , 5 , 6 , 7 , 8 , 9 , 10 , 11}```
+`int x[3][4] = {0, 1 ,2 ,3 ,4 , 5 , 6 , 7 , 8 , 9 , 10 , 11}`
 
 ### Passando Arrays para função em C++
 
 Um array por padrão é um ponteiro, que veremos mais à frente. Se imprimirmos um array sem informar o elemento, será informada a localização dele na memória:
 
-```int arr[] = {1, 22, 33 , 44, 55, 66};```
-
-```std::cout << "Imprimindo o array: " << arr << '\n';```
+```
+int arr[] = {1, 22, 33 , 44, 55, 66};
+std::cout << "Imprimindo o array: " << arr << '\n';
+```
 
 **Podemos alterar ou incluir o elemento à um array após declará-lo:**
 
-```arr[2] = 99;```
-
-```std::cout << "Imprimindo o array de posição 2: " << arr[2] << '\n';```
+``` 
+arr[2] = 99;
+std::cout << "Imprimindo o array de posição 2: " << arr[2] << '\n';
+```
 
 **Passando um array para uma função:**
 
-```void recebe_array( int array_param[] ){```
+```
+void recebe_array( int array_param[] ){
+	array_param[2] = 88;
+}
 
-```array_param[2] = 88;```
-
-```}```
-
-```int main(){```
-
-```int arr[] = {1, 11, 22 , 33, 44, 55};```
-
-```std::cout << "O elemento de posição 2 ANTES de chamar função é: " << arr[2] << '\n';```
-
-```recebe_array( arr );```
-
-```std::cout << "O elemento de posição 2 DEPOIS de chamar função é: " << arr[2] << '\n';```
-
-```return 0;```
-
-```}```
+int main(){
+	int arr[] = {1, 11, 22 , 33, 44, 55};
+	std::cout << "O elemento de posição 2 ANTES de chamar função é: " << arr[2] << '\n';
+	recebe_array( arr );
+	std::cout << "O elemento de posição 2 DEPOIS de chamar função é: " << arr[2] << '\n';
+	return 0;
+}
+```
 
 Para se medir o tamanho de um array utilizamos a função sizeof() e para imprimir todos elementos, veremos quando falarmos sobre loop. Também fique atento à semântica.
 
@@ -916,13 +878,12 @@ Para se medir o tamanho de um array utilizamos a função sizeof() e para imprim
 
 Em determinadas ocasiões, deseja-se coletar dados , para isso usamos o std::cin redirecionando para uma variável:
 
-```char letra {};```
-
-```std::cout << "Informe uma letra: ";```
-
-```std::cin >> letra;```
-
-```std::cout << "A letra que você digitou foi: " << letra << "\n";```
+```
+char letra {};
+std::cout << "Informe uma letra: ";
+std::cin >> letra;
+std::cout << "A letra que você digitou foi: " << letra << "\n";
+```
 
 No entanto, o operador >> sobrecarregado ignora tais caracteres. Para englobar essas situações, C++ oferece o uso da função-membro getline.
 
