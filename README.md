@@ -31,7 +31,7 @@
 - [x] Controles de Fluxo de Repetições
 - [x] Diretivas, pré-compiladores
 - [x] Obtendo endereços de memória com Ponteiros
-- [ ] A classe vector
+- [x] A classe vector
 - [ ] Argumentos via Linha de Comando
 - [ ] Alocação Dinâmica de Memória
 - [ ] Funções Recursivas

@@ -1152,3 +1152,114 @@ Copiando variavel com ponteiro (Sem criar um novo endereço na memoria, mais rap
 string var1 = “Meu conteúdo”;
 string * var2 = &var1;  
 ```
+
+
+
+#--------------------------------------18º Aula--------------------------------------#
+
+### Vectores C++
+
+A classe vector é uma alternativa à representação de um array primitivo. Ao usá-la é necessário especificar o tipo de elementos, ex.: vector<int> v; o vector inicia um array vazio, é necessário também incluir o cabeçalho vector, ex.: #include <vector>
+
+Um iterador é qualquer objeto que, apontando para algum elemento em um intervalo de elementos (como uma matriz ou um contêiner), tem a capacidade de iterar através dos elementos desse intervalo usando um conjunto de operadores. A forma mais óbvia de iterador é um ponteiro: Um ponteiro pode apontar para elementos em uma matriz e pode iterá-los usando o operador de incremento (++).
+
+Vamos utilizar o vetor como exemplo das funções abaixo: `vector<string> v = {"Shell Script", "Web", "C++", "Linux", "BSD"};`
+
+**begin() ->** retorna um iterador para o início do vetor
+
+```
+#include <iostream>
+#include <vector>
+
+int main() {
+	std::vector<std::string> v = {"Shell Script", "Web", "C++", "Linux", "BSD"};
+	std::vector<std::string>::iterator primeiro = v.begin();
+	std::cout << *primeiro << '\n';
+	return 0;
+}
+```
+
+Nota:
+
+Usamos um asterisco(`*`) na frente da variável para imprimir o conteúdo, trata-se de um ponteiro, um conceito que veremos mais à frente. Se não colocássemos ele, daria erro na compilação.
+
+**pop_back() ->** remove o último elemento de um vetor
+
+**end() ->** retorna um iterador logo após o último elemento de um vetor (se não usar push_back antes, retornará 0 , pois o último elemento é '\0')
+
+```
+#include <iostream>
+#include <vector>
+
+int main() {
+	std::vector<std::string> v = {"Shell Script", "Web", "C++", "Linux", "BSD"};
+	v.pop_back(); // Remove o '\0', agora o último elemento é BSD
+	std::vector<std::string>::iterator ultimo = v.end();
+	std::cout << *ultimo << '\n';
+	return 0;
+}
+```
+
+Nota:
+
+É necessário usar o pop_back() antes de atribuir valor com end()
+
+**push_back() ->** adiciona um elemento ao final do vetor
+
+```
+#include <iostream>
+#include <vector>
+
+int main() {
+	std::vector<std::string> v = {"Shell Script", "Web", "C++", "Linux", "BSD"};
+	v.push_back("GNU"); // Adiciona o GNU
+	v.pop_back(); // Remove o \0
+	std::vector<std::string>::iterator primeiro = v.begin();
+	std::cout << *primeiro << '\n';
+	return 0;
+}
+```
+
+**size() ->** adiciona um elemento ao final do vetor
+
+```
+// Levando em conta o vetor inicial
+// Não precisa de iterador
+std::cout << v.size() << '\n';
+```
+
+|Função| O que ela faz|
+|-|:-:|
+| resize() | alterar o tamanho do vetor |
+| assign() | atribuir elementos a um vetor |
+| at() | retorna um elemento em um local específico |
+| back() | retorna uma referência ao último elemento de um vetor |
+| capacity() | retorna o número de elementos que o vetor pode conter |
+| clear() | remove todos os elementos do vetor |
+| empty() | verdadeiro se o vetor não tiver elementos |
+| erase() | remove elementos de um vetor |
+| front() | retorna uma referência ao primeiro elemento de um vetor |
+| insert() | insere elementos no vetor | 
+| max_size() | retorna o número máximo de elementos que o vetor pode conter |
+| rbegin() | retorna um reverse_iterator ao final do vetor |
+| rend() | retorna um reverse_iterator para o início do vetor |
+| reserve() | define a capacidade mínima do vetor |
+| swap() | trocar o conteúdo deste vetor por outro |
+
+### Implementando uso de Vectores C++
+
+Removendo pontos(.) e traço(-) de uma string com os conceitos que acabamos de ver:
+
+```
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+	std::string cpf = "987.568.214-54";
+	cpf.erase( std::remove( cpf.begin() , cpf.end(), '.') , cpf.end() );
+	cpf.erase( std::remove( cpf.begin() , cpf.end(), '-') , cpf.end() );
+	std::cout << cpf << '\n';
+	return 0;
+}
+```
