@@ -1263,3 +1263,63 @@ int main() {
 	return 0;
 }
 ```
+
+
+
+#--------------------------------------19º Aula--------------------------------------#
+
+### Argumentos via Linha de Comando
+
+Em C++ podemos passar argumentos através da linha de comando para um programa quando ele inicia. A função main recebe parâmetros passados via linha de comando como vemos a seguir:
+
+`int main( int argc, char *argv[] )`
+
+Onde:
+
+* argc – é um valor inteiro que indica a quantidade de argumentos que foram passados ao chamar o programa.
+
+* argv – é um vetor de char que contém os argumentos, um para cada string passada na linha de comando.
+
+argv[0] armazena o nome do programa que foi chamado no prompt, sendo assim, argc é pelo menos igual a 1, pois no mínimo existirá um argumento.
+
+Os argumentos passados por linha de comando devem ser separados por um espaço ou tabulação.
+
+Exemplo: Programa que conta e mostra os argumentos recebidos na linha de comando.
+
+```
+#include <iostream>
+
+int main( int argc, char * argv[] ) { // char** argv
+	if( argc > 1 ){
+		for( int i = 0; i < argc ; i++ ){
+			std::cout << "Parametro( " << i << " ): " << argv[i] << '\n';
+		}
+	}else{
+		std::cout << "Nenhum parametro. Valor de argc: " << argc << '\n';
+		std::cout << "Nenhum parametro. Só há argv[0]: " << argv[0] << '\n';
+	}
+ 	return 0;
+}
+```
+
+```
+#include <iostream>
+#include <vector>
+
+int main( int argc, char * argv[] ) {
+	if( argc > 1 ){
+		std::vector<std::string> arguments(argv + 1, argv + argc);
+		for(std::size_t i = 0 ; i < arguments.size(); i++ ){
+			if( arguments[i] == "-h" || arguments[i] == "--help" ){
+				std::cout << argv[0] << " [options]\n"
+					" -v, --version Exibe a versão\n"
+					" -c, --count Conta tudo\n"
+					" -h, --help Exibe a ajuda\n";
+			}
+ 		}
+ 	}else{
+ 		std::cout << "Use: " << argv[0] << " -h ou --help , para mais informações." << '\n';
+	}
+ return 0;
+}
+```

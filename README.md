@@ -32,7 +32,7 @@
 - [x] Diretivas, pré-compiladores
 - [x] Obtendo endereços de memória com Ponteiros
 - [x] A classe vector
-- [ ] Argumentos via Linha de Comando
+- [x] Argumentos via Linha de Comando
 - [ ] Alocação Dinâmica de Memória
 - [ ] Funções Recursivas
 - [ ] Sobrecarga de e Ponteiros de Funções
