@@ -1,7 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main(){
+	std::string cpf = "123.456.789-10";
+	std::cout << "CPF antes de remover: " << cpf << '\n';
+	cpf.erase( std::remove( cpf.begin() , cpf.end(), '.') , cpf.end() );
+	cpf.erase( std::remove( cpf.begin() , cpf.end(), '-') , cpf.end() );
+	std::cout << "CPF depois de remover: " << cpf << '\n';
+
+
 	std::vector<std::string> vet = {"Python","Javascript","SQL","C++"};
 	std::vector<std::string>::iterator inicio = vet.begin();
 	std::cout << "Esse é o primeiro valor " << *inicio << '\n';
