@@ -33,7 +33,7 @@
 - [x] Obtendo endereços de memória com Ponteiros
 - [x] A classe vector
 - [x] Argumentos via Linha de Comando
-- [ ] Alocação Dinâmica de Memória
+- [x] Alocação Dinâmica de Memória
 - [ ] Funções Recursivas
 - [ ] Sobrecarga de e Ponteiros de Funções
 - [ ] O que é, como criar e como utilizar Structs

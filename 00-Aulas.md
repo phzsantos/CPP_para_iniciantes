@@ -1323,3 +1323,38 @@ int main( int argc, char * argv[] ) {
  return 0;
 }
 ```
+
+
+
+#--------------------------------------20º Aula--------------------------------------#
+
+### new e delete
+
+Na linguagem de programação C++, new e delete são um par de construções de linguagem que realizam alocação dinâmica de memória, construção de objetos e destruição de objetos.
+
+Ultimamente eles são pouco utilizados e geralmente são usados com `*ponteiros.`
+
+Exemplo geral:
+
+```
+int* p = new int[4];
+cout << "Digite um NÚMERO: ";
+cin >> *(p);
+
+cout << "Você digitou: " << *p << endl;
+delete[] p;
+p = NULL;
+```
+
+### Resumo
+
+* Para iniciar um ponteiro com valor vazio: nullptr
+* Proteger o ponteiro com parenteses para evitar erros no compilador
+* Sempre que fizer um New, fazer um delete para desalocar aquele valor na memoria
+
+### Um pouco sobre formatação de texto
+
+* `\e[1m " << valor << "\e[m` 1m = **Negrito**
+* `\e[1m " << valor << "\e[m` 2m = Normal
+* `\e[1m " << valor << "\e[m` 3m = *Italico*
+* `\e[1m " << valor << "\e[m` 4m = _<ins>Sublinhado</ins>_
