@@ -34,7 +34,7 @@
 - [x] A classe vector
 - [x] Argumentos via Linha de Comando
 - [x] Alocação Dinâmica de Memória
-- [ ] Funções Recursivas
+- [x] Funções Recursivas
 - [ ] Sobrecarga de e Ponteiros de Funções
 - [ ] O que é, como criar e como utilizar Structs
 - [ ] Tipos Enumerados
