@@ -1,21 +1,21 @@
 #include <iostream>
 
-struct clientes {
+typedef struct clientes {
 	std::string NOME;
 	std::string SOBRENOME;
 	int MATRICULA;
-};
+} t_clientes;
 
-void mostrar_dados( struct clientes c){
+void mostrar_dados( t_clientes c){
 	std::cout << ":::: DADOS DO CLIENTE ::::" << '\n';
 	std::cout << c.NOME << " " << c.SOBRENOME << " - " << c.MATRICULA << '\n';
 }
 
-struct clientes pegar_dados(){
-	struct clientes c;
+t_clientes pegar_dados(){
+	t_clientes c;
 	std::cout << "Informe o nome do cliente: ";
 	std::getline( std::cin, c.NOME);
-	std::cout << "Informe o nome do cliente: ";
+	std::cout << "Informe o sobrenome do cliente: ";
 	std::getline( std::cin, c.SOBRENOME);
 	std::cout << "Informe a matricula do cliente: ";
 	std::cin >> c.MATRICULA;
@@ -24,7 +24,7 @@ struct clientes pegar_dados(){
 
 int	main(int argc, char const ** argv){
 	std::cout << ":::: CADASTRO DO CLIENTE ::::" << '\n';
-	struct clientes dados_cliente;
+	t_clientes dados_cliente;
 	dados_cliente = pegar_dados();
 	mostrar_dados( dados_cliente );
 	return 0;
