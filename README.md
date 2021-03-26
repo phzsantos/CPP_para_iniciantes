@@ -35,7 +35,7 @@
 - [x] Argumentos via Linha de Comando
 - [x] Alocação Dinâmica de Memória
 - [x] Funções Recursivas
-- [ ] Sobrecarga de e Ponteiros de Funções
+- [x] Sobrecarga de e Ponteiros de Funções
 - [ ] O que é, como criar e como utilizar Structs
 - [ ] Tipos Enumerados
 - [ ] Manipulando arquivos com C++

@@ -1381,3 +1381,13 @@ Dentre diversas funcionalidades das funções recursivas existe também o cálcu
 0,1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, ... .
 
 A fórmula é: `Fn = F(n - 1) + F(n-2)`
+
+
+
+#--------------------------------------22º Aula--------------------------------------#
+
+### Sobrecarga de funções e ponteiros de funções em C++
+
+Sobrecarga de Nomes de Funções - É quando seu código possui funções com mesmo nome, no entanto, são de tipos ou quantidade de argumentos diferente, vejamos alguns exemplos.
+
+Ponteiro de Função - Algumas vezes precisamos criarponteiros em funções, pois o retorno é do tipo ponteiro, e a função só retornará um ponteiro se ela for do tipo ponteiro, exemplos.
