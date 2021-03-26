@@ -13,9 +13,15 @@ std::string funcao( std::string palavra1, std::string palavra2 ){
 	return palavra;
 }
 
+std::string * funcao( std::string * n1){
+	return n1;
+}
+
 int main( int argc, char const ** argv ){
 	funcao();
 	std::cout << funcao(1,2) << '\n';
 	std::cout << funcao( "Paulo", "Henrique" ) << '\n';
+	std::string nome {"Just do it"};
+	std::cout << *funcao( &nome ) << '\n';
 	return 0;
 }
