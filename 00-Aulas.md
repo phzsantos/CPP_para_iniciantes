@@ -1391,3 +1391,21 @@ A fórmula é: `Fn = F(n - 1) + F(n-2)`
 Sobrecarga de Nomes de Funções - É quando seu código possui funções com mesmo nome, no entanto, são de tipos ou quantidade de argumentos diferente, vejamos alguns exemplos.
 
 Ponteiro de Função - Algumas vezes precisamos criarponteiros em funções, pois o retorno é do tipo ponteiro, e a função só retornará um ponteiro se ela for do tipo ponteiro, exemplos.
+
+
+
+#--------------------------------------23º Aula--------------------------------------#
+
+### Structs em C++
+
+O uso de estruturas (struct) pode substituir o uso de classes, ou até mesmo usar em conjunto. A partir do uso de struct que criou-se o conceito de Linguagem Estruturada em contrapartida à Orientação à Objetos.
+
+Iremos abordar bem por cima, pois esse conceito é mais utilizado na Linguagem C, pois em C++ temos o conceito de classes que é similar às structs só que muito mais incrementada.
+
+SINOPSE:
+
+```
+struct nomedaestrutura {
+	//declaração dos membros
+} definição de variáveis (opcional)
+```

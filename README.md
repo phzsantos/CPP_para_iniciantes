@@ -36,7 +36,7 @@
 - [x] Alocação Dinâmica de Memória
 - [x] Funções Recursivas
 - [x] Sobrecarga de e Ponteiros de Funções
-- [ ] O que é, como criar e como utilizar Structs
+- [x] O que é, como criar e como utilizar Structs
 - [ ] Tipos Enumerados
 - [ ] Manipulando arquivos com C++
 - [ ] Executando comando da Shell via C++
