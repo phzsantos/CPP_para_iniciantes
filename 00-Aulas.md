@@ -1409,3 +1409,24 @@ struct nomedaestrutura {
 	//declaração dos membros
 } definição de variáveis (opcional)
 ```
+
+
+
+#--------------------------------------24º Aula--------------------------------------#
+
+### Enum em C++
+
+C++ contém alguns tipos de dados integrados. Mas esses tipos nem sempre são suficientes para os tipos de coisas que queremos fazer. Portanto, C++ contém recursos que permitem aos programadores
+criar seus próprios tipos de dados. Esses tipos de dados são chamados de tipos de dados definidos pelo usuário.
+
+Talvez o tipo de dados mais simples definido pelo usuário seja o tipo enumerado. Um tipo enumerado (também chamado de enumeração ou enum ) é um tipo de dados em que cada valor possível é definido como uma constante simbólica (chamada de enumerador). Enumerações são definidas por meio da palavra-chave enum. Vejamos um exemplo:
+
+```
+enum Animals {
+	gato,
+	cachorro,
+	papagaio
+};
+```
+
+As enumerações são úteis para criar dados fáceis de lembrar.
