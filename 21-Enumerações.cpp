@@ -18,10 +18,17 @@ enum Cores3 {
 	roxo = 60
 };
 
+enum Saidas {
+	sucesso,
+	erro_de_compilação,
+	erro_de_usuário
+};
+
 int main(int argc, char const ** argv){
 	Cores cores;
 	Cores2 cores2;
 	Cores3 cores3;
+	Saidas saidas;
 	std::cout << "O numero da cor vermelha é: " << vermelho << '\n';
 	std::cout << "O numero da cor azul é: " << azul << '\n';
 	std::cout << "O numero da cor preta é: " << preto << '\n';
@@ -31,5 +38,5 @@ int main(int argc, char const ** argv){
 	std::cout << '\n' << "O numero da cor laranja é: " << laranja << '\n';
 	std::cout << "O numero da cor amarela é: " << amarelo << '\n';
 	std::cout << "O numero da cor roxa é: " << roxo << '\n';
-	return 0;
+	return sucesso;
 }
