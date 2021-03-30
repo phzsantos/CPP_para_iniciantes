@@ -1461,3 +1461,38 @@ Para gravar em um arquivo com C++:
 
 
 
+#--------------------------------------26º Aula--------------------------------------#
+
+### Obtendo variáveis de ambiente com C++
+
+Para "pegar" variáveis de ambiente do sistema, basta incluir a biblioteca `#include <cstdlib>` ou a `#include <stdlib.h>` que são a mesma biblioteca, no C++ as bibliotecas que foram herdadas da Linguagem C , possuem o mesmo nome, porém com o c na frente e sem o .h , ou você pode usar com o mesmo nome do C , inclusive com o .h no final. Após isso, use a função getenv() pra imprimir o nome da variável com o mesmo nome que ela possui no ambiente do sistema, exemplo:
+
+Mostrar o TEMA o nome de usuário:
+
+```
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+	cout << "USUÁRIO: " << getenv("USER") << endl;
+	return 0;
+}
+```
+
+### Executar comandos do Shell em C++
+
+Para executar do Shell, é muito simples, basta usar a função system() , não use ela vazia (não irá compilar), exemplo, rodar comando que mostra a resolução de tela do seu monitor:
+
+Também usando a biblioteca cstdlib . Certifique-se que o comando xdpyinfo está instalado.
+
+```
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+	system("echo -n 'SUA RESOLUÇÃO DE TELA É: '; xdpyinfo | grep 'dimensions:' | sed 's/.*://;s/pixels.*//;s/ //g;'");
+	return 0;
+}
+```
