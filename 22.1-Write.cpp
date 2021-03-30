@@ -6,7 +6,7 @@ int main(int argc, char const ** argv ){
 	std::string conteudo, outro;
 	std::ofstream arquivo;
 
-	arquivo.open("22.2-Arquivo.txt");
+	arquivo.open("22.2-Arquivo.txt", std::ios_base::app );
 
 	std::cout << "Escreva algo para adicionar no arquivo: ";
 	std::getline( std::cin, conteudo);
