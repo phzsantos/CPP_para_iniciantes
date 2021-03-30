@@ -1,4 +1,2 @@
-Conteudo para ser lido :)
-
-leia-me!
-
+C++ é muito bom!
+É mais legal que python...
