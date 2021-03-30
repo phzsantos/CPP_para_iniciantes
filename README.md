@@ -38,7 +38,7 @@
 - [x] Sobrecarga de e Ponteiros de Funções
 - [x] O que é, como criar e como utilizar Structs
 - [x] Tipos Enumerados
-- [ ] Manipulando arquivos com C++
+- [x] Manipulando arquivos com C++
 - [ ] Executando comando da Shell via C++
 - [ ] Utilizando o tipo static
 - [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 1

@@ -1430,3 +1430,34 @@ enum Animals {
 ```
 
 As enumerações são úteis para criar dados fáceis de lembrar.
+
+
+
+#--------------------------------------25º Aula--------------------------------------#
+
+### Manipulando arquivos com C++
+
+Existem 3 bibliotecas no C++ que manipulam arquivos:
+
+* ifstream - ler dados de um arquivo;
+* ofstream - escreve dados em um arquivo;
+* fstream - ler e escreve dados em um arquivo.
+
+Para ler um arquivo com C++:
+
+1) Incluir logo a fstream que já evita problemas. : `#include <fstream>`
+2) Declarar uma linha, exemplo: `string linha;`
+3) DEFINIR o nome do arquivo(Input File), exemplo: `ifstream arquivo("file.txt");`
+4) Criar uma condição para abrir o arquivo: `if( arquivo.is_open() ){}`
+5) Gerar um loop por linha, exemplo: `while( getline( arquivo , linha ) ){}`
+6) Fechar o arquivo: `arquivo.close();`
+
+Para gravar em um arquivo com C++:
+
+7) Usa-se `ofstream`(Output File);
+8) Direciona o conteúdo para o arquivo: `arquivo << conteudo << ‘\n’;`
+9) Fecha o arquivo `arquivo.close();`
+10) Para anexar usa-se o parâmetro: `std::ios_base::app`
+
+
+
