@@ -1,7 +1,7 @@
 #include <iostream>
 
 void incrementar(){
-	int value{ 1 };
+	static int value{ 1 };
 	++value;
 	std::cout << value << '\n';
 }
