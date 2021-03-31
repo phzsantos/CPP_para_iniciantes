@@ -40,7 +40,7 @@
 - [x] Tipos Enumerados
 - [x] Manipulando arquivos com C++
 - [x] Executando comando da Shell via C++
-- [ ] Utilizando o tipo static
+- [x] Utilizando o tipo static
 - [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 1
 - [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 2
 - [ ] Exercício 2: Desenhando com C++ via Loops - Parte 1

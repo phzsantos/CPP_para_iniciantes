@@ -1496,3 +1496,33 @@ int main(){
 	return 0;
 }
 ```
+
+
+
+#--------------------------------------27º Aula--------------------------------------#
+
+### Obtendo variáveis de ambiente com C++
+
+O termo static é um dos termos mais confusos na linguagem C++, em grande parte porque static tem significados diferentes em contextos diferentes. 
+
+Usar a palavra-chave static em uma variável local muda seu tempo de duração . A variável estática manterá seu valor mesmo depois de sair do escopo! Um dos usos mais comuns para variáveis locais de duração estática é para geradores de ID exclusivos.
+
+```
+#include <iostream>
+
+void increment_e_print(){
+	int value{ 1 }; // duração automática
+	++value;
+	std::cout << value << '\n';
+} // a variável value é destruída aqui
+
+int main(){
+ // Cada vez que increment_e_print() é chamada, incrementa o valor para 2 e, em seguida, imprime o valor de 2.
+	increment_e_print();
+	increment_e_print();
+	increment_e_print();
+	return 0;
+}
+```
+
+Rode esse programa e depois altere a variável para static. Use static em C++ somente quando necessário.
