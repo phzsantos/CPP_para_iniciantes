@@ -41,7 +41,7 @@
 - [x] Manipulando arquivos com C++
 - [x] Executando comando da Shell via C++
 - [x] Utilizando o tipo static
-- [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 1
+- [x] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 1
 - [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 2
 - [ ] Exercício 2: Desenhando com C++ via Loops - Parte 1
 - [ ] Exercício 2: Desenhando com C++ via Loops - Parte 2
