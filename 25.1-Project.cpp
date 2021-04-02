@@ -10,12 +10,14 @@ void _help(){
 	     	     "--bin2dec para converter binario para decimal\n";	     
 }
 
-int dec2bin( int number ){
-	std::cout << "Eu sou o dec2bin" << number << '\n';
+void dec2bin( int number ){
+	system("clear");
+	std::cout << "Eu sou o dec2bin " << number << '\n';
 }
 
-int bin2dec( int number ){
-	std::cout << "Eu sou o bin2dec" << number << '\n';
+void bin2dec( int number ){
+	system("clear");
+	std::cout << "Eu sou o bin2dec " << number << '\n';
 }
 
 void _start( int argc, char ** argv ){	
