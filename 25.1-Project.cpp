@@ -27,9 +27,17 @@ void dec2bin( int number ){
 	std::cout << '\n';
 }
 
-void bin2dec( int number ){
+int bin2dec( int number ){
 	system("clear");
-	std::cout << "Eu sou o bin2dec " << number << '\n';
+	int ultimo_digito = {0}, num_dec = {0}, base = {1};
+	while( number ){
+		ultimo_digito = number % 10;
+		number = number / 10;
+		num_dec += ultimo_digito * base;
+		base = base * 2;
+	}
+
+	return num_dec;
 }
 
 void _start( int argc, char ** argv ){	
@@ -39,7 +47,7 @@ void _start( int argc, char ** argv ){
 		if(param == "--dec2bin" || param == "-b" ){
 			dec2bin( number );
 		}else if( param == "--bin2dec" || param == "-d" ){
-			bin2dec( number );
+			std::cout << bin2dec( number ) << '\n';
 		}else{
 			_help();
 		}

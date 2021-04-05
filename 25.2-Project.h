@@ -3,7 +3,7 @@
 
 void _start( int, char ** );
 
-void bin2dec( int );
+int bin2dec( int );
 
 void dec2bin( int );
 
