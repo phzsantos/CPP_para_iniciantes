@@ -9,3 +9,5 @@ int bin2dec( int );
 void dec2bin( int );
 
 void _help();
+
+bool check_number( char * );
