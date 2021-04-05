@@ -40,10 +40,28 @@ int bin2dec( int number ){
 	return num_dec;
 }
 
+bool check_number( char * x ){
+	bool t = {true};
+
+	for( int i = 0; i < strlen( x ); i++ ){
+		if( isdigit( x[i] ) == false ){
+			t = false;
+		}
+	}
+
+	return t;
+}
+
 void _start( int argc, char ** argv ){	
 	if( argc > 2){
 		std::string param = argv[1];
 		int number = std::stoi( argv[2] );
+		
+		if( ! check_number( argv[2] )){
+			_help();
+			return;
+		}
+
 		if(param == "--dec2bin" || param == "-b" ){
 			dec2bin( number );
 		}else if( param == "--bin2dec" || param == "-d" ){
