@@ -12,7 +12,19 @@ void _help(){
 
 void dec2bin( int number ){
 	system("clear");
-	std::cout << "Eu sou o dec2bin " << number << '\n';
+	int binary_arr[32], i = {0};
+
+	while( number > 0 ){
+		binary_arr[i] = number % 2;
+		number = number / 2;
+		i++;
+	}
+
+	for( int k = i - 1; k >= 0; k-- ){
+		std::cout << binary_arr[k];
+	}
+
+	std::cout << '\n';
 }
 
 void bin2dec( int number ){
