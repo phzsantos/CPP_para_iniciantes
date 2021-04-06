@@ -13,7 +13,15 @@ int main(int argc, char const ** argv ){
       }
       std::cout << '\n';
     }else{
-      std::cout << "|" << '\n';
+      std::cout << "|";
+      for( int j = 0; j <= 20; j++){
+        if(j == 20){
+          std::cout << "|";
+        }else{
+          std::cout << " ";
+        }
+      }
+      std::cout << '\n';
     }
   }
   return 0;
