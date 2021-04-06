@@ -42,10 +42,10 @@
 - [x] Executando comando da Shell via C++
 - [x] Utilizando o tipo static
 - [x] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 1
-- [ ] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 2
-- [ ] Exercício 2: Desenhando com C++ via Loops - Parte 1
-- [ ] Exercício 2: Desenhando com C++ via Loops - Parte 2
-- [ ] Exercício 2: Desenhando com C++ via Loops - Parte 3
+- [x] Exercício 1: Criando uma aplicação de conversão binária e decimal - Parte 2
+- [x] Exercício 2: Desenhando com C++ via Loops - Parte 1
+- [x] Exercício 2: Desenhando com C++ via Loops - Parte 2
+- [x] Exercício 2: Desenhando com C++ via Loops - Parte 3
 - [ ] Introdução à biblioteca NCURSES
 - [ ] Utilizando o Makefile
 - [ ] Aprendendo a utilizar o CMake, Ninja e Meson
