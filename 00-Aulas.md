@@ -1526,3 +1526,35 @@ int main(){
 ```
 
 Rode esse programa e depois altere a variável para static. Use static em C++ somente quando necessário.
+
+
+
+#--------------------------------------33º Aula--------------------------------------#
+
+### ncurses com C++
+
+ncurses (new curses, uma melhoria da biblioteca curses do UNIX, já ncurses é POSIX, independe do sistema operacional) e é um kit de ferramentas para o desenvolvimento de software de aplicativo "semelhante a uma GUI".
+
+É possível ncurses em uma variedade de linguagens de programação, incluindo C++ .
+
+Alguns softwares famosos feitos com ncurses são:
+
+* menuconfig do Kernel Linux
+* Vim
+* Neovim
+* Aptitude
+* Mutt
+* Lynx
+* Ranger
+* Emacs
+* Tmux
+* Dialog
+* Entre muitos outros
+
+Para usar a bibioteca ncurses você precisa instalá-la.
+
+Exemplos em Sistemas baseados em APT:
+
+`sudo apt install libncurses6-dev`
+
+ 
