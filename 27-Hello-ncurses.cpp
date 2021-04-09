@@ -4,8 +4,12 @@
 
 int main( int argc, char ** argv ){
 	
-	std::string ola = "Olá mundo e ncurses!";
+	std::string ola = "Olá ncurses!";
 	char * hello = &ola[0];
+
+	if( argc > 1 ){
+		hello = argv[1]; // para printra tudo ./a "texto" caso não use aspas ele só mostra a 1 word
+	}
 
 	// inicializa ncurses
 	initscr(); //init screen
