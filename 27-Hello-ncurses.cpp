@@ -1,12 +1,17 @@
 //inclui a biblioteca
 #include <ncurses.h>
+#include <string>
 
 int main( int argc, char ** argv ){
+	
+	std::string ola = "Olá mundo e ncurses!";
+	char * hello = &ola[0];
+
 	// inicializa ncurses
 	initscr(); //init screen
 
 	// exibe na tela os dados
-	printw("Olá ncurses!"); // print window
+	printw( hello ); // print window
 
 	// atualiza a "janela do terminal"
 	refresh();
