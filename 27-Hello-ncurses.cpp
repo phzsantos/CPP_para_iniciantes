@@ -14,6 +14,8 @@ int main( int argc, char ** argv ){
 	// inicializa ncurses
 	initscr(); //init screen
 
+	move( 10, 50); // Define onde você vai mostrar o conteudo [vertical] [horizontal]
+	
 	// exibe na tela os dados
 	printw( hello ); // print window
 
