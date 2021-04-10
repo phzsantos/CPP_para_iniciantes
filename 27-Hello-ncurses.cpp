@@ -1,6 +1,7 @@
 //inclui a biblioteca
 #include <ncurses.h>
 #include <string>
+#include <unistd.h>
 
 int main( int argc, char ** argv ){
 	
@@ -11,8 +12,20 @@ int main( int argc, char ** argv ){
 		hello = argv[1]; // para printra tudo ./a "texto" caso não use aspas ele só mostra a 1 word
 	}
 
+	const int delay = 30000;
+	int y, x;
+	x = y = 0;
+
 	// inicializa ncurses
 	initscr(); //init screen
+
+	while( 1 ){  //faz a animação da bolinha andando pelo terminal
+		clear();
+		mvprintw( y, x, "o");
+		refresh();
+		usleep(delay);
+		++x;
+	}
 
 	move( 10, 50); // Define onde você vai mostrar o conteudo [vertical] [horizontal]
 	
