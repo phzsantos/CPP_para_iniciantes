@@ -22,6 +22,7 @@ int main( int argc, char ** argv ){
 	while( 1 ){  //faz a animação da bolinha andando pelo terminal
 		clear();
 		mvprintw( y, x, "o");
+		getch();
 		refresh();
 		usleep(delay);
 		++x;
