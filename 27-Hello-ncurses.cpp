@@ -19,6 +19,9 @@ int main( int argc, char ** argv ){
 	// inicializa ncurses
 	initscr(); //init screen
 
+	noecho();
+	curs_set(FALSE);
+
 	while( 1 ){  //faz a animação da bolinha andando pelo terminal
 		clear();
 		mvprintw( y, x, "o");
