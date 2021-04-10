@@ -1557,4 +1557,10 @@ Exemplos em Sistemas baseados em APT:
 
 `sudo apt install libncurses6-dev`
 
- 
+No meu caso, no Fedora 33:
+
+`sudo dnf install ncurses-devel`
+
+Documentação do Ncurses feita pelo Marcos:
+
+https://terminalroot.com.br/ncurses/
