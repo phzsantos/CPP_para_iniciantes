@@ -4,37 +4,28 @@
 #include <unistd.h>
 
 int main( int argc, char ** argv ){
+
+	int altura, largura, inicio_x, inicio_y;
+	altura = inicio_x = inicio_y = 10;
+	largura = 80;
 	
-	std::string ola = "Olá ncurses!";
-	char * hello = &ola[0];
-
-	if( argc > 1 ){
-		hello = argv[1]; // para printra tudo ./a "texto" caso não use aspas ele só mostra a 1 word
-	}
-
-	const int delay = 30000;
-	int y, x;
-	x = y = 0;
-
 	// inicializa ncurses
 	initscr(); //init screen
 
 	noecho();
 	curs_set(FALSE);
 
-	while( 1 ){  //faz a animação da bolinha andando pelo terminal
-		clear();
-		mvprintw( y, x, "o");
-		getch();
-		refresh();
-		usleep(delay);
-		++x;
-	}
+	WINDOW * window = newwin( altura, largura, inicio_x, inicio_y );
+	refresh();
+
+	box( window, 0, 0 );
+	wprintw( window, "Formulario de contato" );
+	wrefresh( window );
 
 	move( 10, 50); // Define onde você vai mostrar o conteudo [vertical] [horizontal]
 	
 	// exibe na tela os dados
-	printw( hello ); // print window
+	//printw( hello ); // print window
 
 	// atualiza a "janela do terminal"
 	refresh();
