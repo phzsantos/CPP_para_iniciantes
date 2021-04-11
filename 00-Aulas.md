@@ -1564,3 +1564,31 @@ No meu caso, no Fedora 33:
 Documentação do Ncurses feita pelo Marcos:
 
 https://terminalroot.com.br/ncurses/
+
+
+
+#--------------------------------------38º Aula--------------------------------------#
+
+### Versões do C++
+
+Existem várias versões da linguagem de programação C++ . Essas versões da linguagem são implementações de compiladores baseados em especificações construídas pela comunidade ISO C++, a comunidade que supervisiona o desenvolvimento da linguagem.
+
+* C++ 98 - primeira edição lançada em 1998.
+* C++ 03 - segunda edição lançada em 2003.
+* C++ 11 - terceira edição lançada em 2011.
+* C++ 14 - quarta edição lançada em 2014.
+* C++ 17 - quinta edição lançada em 2017.
+* C++ 20 - a mais nova versão, ainda em desenvolvimento em 2020.
+
+Todas essas versões têm muitas diferenças, principalmente adições à biblioteca padrão e expansão de APIs. Você pode ler sobre as especificações dessas versões no site da ISO: https://isocpp.org/.
+
+Pra você descobrir qual versão está usando imprima a constante `__cplusplus` . Se a saída for:
+
+* C++ pre-C++98: `__cplusplus` é 1.
+* C++98: `__cplusplus` é 199711L.
+* C++11: `__cplusplus` é 201103L.
+* C++14: `__cplusplus` é 201402L.
+* C++17: `__cplusplus` é 201703L.
+* C++20: `__cplusplus` é 202003L.
+
+Para compilar em outra versão, use o parâmetro `-std=c++XX` , exemplo para compilar em C++17 → `-std=c++17`. Se quiser ver a diferença não suportada é só criar um código com especificações de uma versão e tentar compilar numa inferior, por exemplo o uso do cabeçalho `<string>` que é incluído automaticamente, mas na versão c++98 não era. Para mais informações rode: `man g++ | grep '\-std='`

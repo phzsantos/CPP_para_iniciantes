@@ -50,7 +50,7 @@
 - [ ] Utilizando o Makefile
 - [ ] Aprendendo a utilizar o CMake, Ninja e Meson
 - [ ] Conceitos sobre Autotools e o IDE Anjuta
-- [ ] Boas Práticas e Dicas para escrever melhor em C++
-- [ ] Obtendo informações e modificando Versões do C++ para seu programa
+- [x] Boas Práticas e Dicas para escrever melhor em C++
+- [x] Obtendo informações e modificando Versões do C++ para seu programa
 - [ ] return 0;
 - [ ] Vamos testar seu conhecimento de acordo com o conteúdo de C++ para Iniciantes
