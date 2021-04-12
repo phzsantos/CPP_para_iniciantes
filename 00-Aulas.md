@@ -1618,3 +1618,32 @@ Pra você descobrir qual versão está usando imprima a constante `__cplusplus` 
 Para compilar em outra versão, use o parâmetro `-std=c++XX` , exemplo para compilar em C++17 → `-std=c++17`. Se quiser ver a diferença não suportada é só criar um código com especificações de uma versão e tentar compilar numa inferior, por exemplo o uso do cabeçalho `<string>` que é incluído automaticamente, mas na versão c++98 não era. Para mais informações rode: `man g++ | grep '\-std='`
 
 
+
+#--------------------------------------Simulado--------------------------------------#
+
+1 - C++ é uma linguagem de programação:
+
+COMPILADA
+
+2 - Quem criou o C++ ?
+
+Bjarne Stroustrup
+
+3 - Qual dos códigos abaixo não compila ?
+
+```
+#include <iostream>
+
+int main(){
+	std::cout << "Ola mundo!" << endl;
+	return 0;
+}
+```
+
+4 - Como declarar constantes em C++ ?
+
+`const string hello = "Hello, literal constant!";`
+
+5 - Qual parâmetro deve ser passado durante a compilação para compilar na versão 17 do C++?
+
+`-std=c++17`
