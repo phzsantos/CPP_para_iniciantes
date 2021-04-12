@@ -1567,6 +1567,12 @@ https://terminalroot.com.br/ncurses/
 
 
 
+#--------------------------------------34º Aula--------------------------------------#
+
+https://terminalroot.com.br/2019/12/como-criar-um-makefile.html
+
+
+
 #--------------------------------------38º Aula--------------------------------------#
 
 ### Versões do C++
@@ -1592,3 +1598,5 @@ Pra você descobrir qual versão está usando imprima a constante `__cplusplus` 
 * C++20: `__cplusplus` é 202003L.
 
 Para compilar em outra versão, use o parâmetro `-std=c++XX` , exemplo para compilar em C++17 → `-std=c++17`. Se quiser ver a diferença não suportada é só criar um código com especificações de uma versão e tentar compilar numa inferior, por exemplo o uso do cabeçalho `<string>` que é incluído automaticamente, mas na versão c++98 não era. Para mais informações rode: `man g++ | grep '\-std='`
+
+
