@@ -1583,6 +1583,14 @@ https://terminalroot.com.br/ncurses/
 
 
 
+#--------------------------------------36º Aula--------------------------------------#
+
+**AUTOTOOLS:** https://terminalroot.com.br/2019/12/tutorial-definitivo-do-gnu-autotools-para-iniciantes.html
+
+**ANJUTA:** https://terminalroot.com.br/2020/08/anjuta-o-melhor-ide-para-c-com-gtkmm.html
+
+
+
 #--------------------------------------38º Aula--------------------------------------#
 
 ### Versões do C++

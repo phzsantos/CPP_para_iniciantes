@@ -49,7 +49,7 @@
 - [x] Introdução à biblioteca NCURSES
 - [x] Utilizando o Makefile
 - [x] Aprendendo a utilizar o CMake, Ninja e Meson
-- [ ] Conceitos sobre Autotools e o IDE Anjuta
+- [x] Conceitos sobre Autotools e o IDE Anjuta
 - [x] Boas Práticas e Dicas para escrever melhor em C++
 - [x] Obtendo informações e modificando Versões do C++ para seu programa
 - [ ] return 0;
