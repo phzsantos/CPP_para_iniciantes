@@ -1577,6 +1577,10 @@ https://terminalroot.com.br/ncurses/
 
 **CMAKE:** https://terminalroot.com.br/2019/12/como-compilar-seus-programas-com-cmake.html
 
+**MESON:** https://terminalroot.com.br/2020/03/como-compilar-programas-com-meson-build.html
+
+**NINJA:** https://terminalroot.com.br/2020/03/como-compilar-programas-com-ninja-build.html
+
 
 
 #--------------------------------------38º Aula--------------------------------------#
