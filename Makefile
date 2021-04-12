@@ -1,6 +1,8 @@
-TARGET=programa
+TARGET=ncurses
 CXX=g++
 LD=g++
-OBJS=28-cores.cpp
-programa:$(OBJS)
-	$(LD) -o $(TARGET) $(OBJS)
+OBJS=27-Hello-ncurses.cpp
+NCURSES=-lncurses
+TINFO=-ltinfo
+ncurses:$(OBJS)
+	$(LD) -o $(TARGET) $(OBJS) $(NCURSES) $(TINFO)
