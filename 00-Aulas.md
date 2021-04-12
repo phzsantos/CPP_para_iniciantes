@@ -1569,7 +1569,13 @@ https://terminalroot.com.br/ncurses/
 
 #--------------------------------------34º Aula--------------------------------------#
 
-https://terminalroot.com.br/2019/12/como-criar-um-makefile.html
+**MAKEFILE:** https://terminalroot.com.br/2019/12/como-criar-um-makefile.html
+
+
+
+#--------------------------------------35º Aula--------------------------------------#
+
+**CMAKE:** https://terminalroot.com.br/2019/12/como-compilar-seus-programas-com-cmake.html
 
 
 

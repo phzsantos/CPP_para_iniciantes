@@ -48,7 +48,7 @@
 - [x] Exercício 2: Desenhando com C++ via Loops - Parte 3
 - [x] Introdução à biblioteca NCURSES
 - [x] Utilizando o Makefile
-- [ ] Aprendendo a utilizar o CMake, Ninja e Meson
+- [x] Aprendendo a utilizar o CMake, Ninja e Meson
 - [ ] Conceitos sobre Autotools e o IDE Anjuta
 - [x] Boas Práticas e Dicas para escrever melhor em C++
 - [x] Obtendo informações e modificando Versões do C++ para seu programa
