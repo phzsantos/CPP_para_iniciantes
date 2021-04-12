@@ -1,8 +1,19 @@
-TARGET=ncurses
-CXX=g++
+TARGET=conversor
+CC=g++
+DEBUG=-g
+OPT=-O2
+WARN=-Wall
+CCFLAGS=$(DEBUG) $(OPT) $(WARN)
 LD=g++
-OBJS=27-Hello-ncurses.cpp
-NCURSES=-lncurses
-TINFO=-ltinfo
-ncurses:$(OBJS)
-	$(LD) -o $(TARGET) $(OBJS) $(NCURSES) $(TINFO)
+OBJS= main.o project.o
+all: $(OBJS)
+	$(LD) -o $(TARGET) $(OBJS)
+
+main.o: 25-Main.cpp
+	$(CC) -c $(CCFLAGS) 25-Main.cpp -o main.o
+
+project.o: 25.1-Project.cpp
+	$(CC) -c $(CCFLAGS) 25.1-Project.cpp  -o project.o
+
+clean:
+	@rm -f *.o
